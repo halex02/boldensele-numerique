@@ -47,3 +47,8 @@ Cette fusion est volontaire et vise à simplifier l’arborescence tout en conse
 
 Les scripts présents dans `/tools` sont conçus pour être exécutés localement et ne sont jamais utilisés directement côté site web.
 
+---
+
+## Liste des outils archivés dans le dossier
+- `rename.sh` : script de renommage utilisé pour nommer les prises de vue selon le folio
+- `transform.py` :
