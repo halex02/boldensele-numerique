@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="index">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="titre" maxOccurs="1"/>
+				<xs:element ref="terme" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="titre" type="xs:string"/>
+
+	<xs:element name="terme">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="cle-index" maxOccurs="1"/>
+				<xs:element ref="nombre-occurences" maxOccurs="1"/>
+				<xs:element ref="description" maxOccurs="1"/>
+				<xs:element ref="flexions" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="cle-index" type="xs:string"/>
+
+	<xs:element name="nombre-occurences">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="description">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="titre_oeuvre" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="titre_oeuvre">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="lien" type="xs:anyURI" use="optional"/>
+					<xs:attribute name="titre" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="flexions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="traitement_forme_flechie" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="traitement_forme_flechie">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="forme_flechie" maxOccurs="1"/>
+				<xs:element ref="positions" maxOccurs="1"/>
+			</xs:sequence>
+
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="forme_flechie">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="nature" type="xs:string" use="optional"/>
+					<xs:attribute name="genre" type="xs:string" use="optional"/>
+					<xs:attribute name="nombre" type="xs:string" use="optional"/>
+					<xs:attribute name="cas" type="xs:string" use="optional"/>
+					<xs:attribute name="degre" type="xs:string" use="optional"/>
+					<xs:attribute name="temps" type="xs:string" use="optional"/>
+					<xs:attribute name="mode" type="xs:string" use="optional"/>
+					<xs:attribute name="personne" type="xs:string" use="optional"/>
+					<xs:attribute name="construction" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="positions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="numero-vers" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="numero-vers">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+</xs:schema>

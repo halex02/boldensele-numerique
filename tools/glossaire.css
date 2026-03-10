@@ -1,0 +1,106 @@
+/* Style général */
+glossaire {
+	display: block;
+	font-family: Arial, sans-serif;
+	width: 60%;
+	margin: auto;
+	background-color: #D4AC6A;
+	color: black;
+}
+
+/* Titre de l'index */
+title {
+	display: block;
+	font-size: 32px;
+	font-weight: bolder;
+	text-align: center;
+	margin-bottom: 15px;
+	color: #051B38;
+}
+
+/* Chaque terme */
+terme {
+	display: block;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+	background-color: #458A79;
+}
+
+/* Clé indexée */
+lemme {
+	display: inline;
+	font-weight: bold;
+	font-size: 18px;
+	color: #051B38;
+}
+
+lemme[nature = 'nom']::after{
+	content:' – 'attr(nature)' 'attr(genre);
+}
+
+lemme[nature='verbe']::after{
+	content:' – 'attr(nature)' 'attr(construction);
+}
+lemme[nature='adverbe']::after{
+	content:' – 'attr(nature);
+}
+lemme[nature ='adjectif']::after {
+	content:' – 'attr(nature);
+}
+
+/* Nombre d’occurrences */
+nombre-occurences {
+	display: inline;
+	font-size: 14px;
+	margin-left: 10px;
+	color: black;
+}
+nombre-occurences::before {
+	content: "(";
+}
+nombre-occurences::after {
+	content: ")";
+}
+/* Description */
+definition {
+	display: block;
+	margin-top: 5px;
+	color: black;
+}
+
+titre_oeuvre {
+	font-style: italic;
+}
+/* Forme flechie */
+traitement_forme_flechie {
+	display: block;
+}
+forme_flechie {
+	color: #051B38;
+	font-weight: bolder;
+}
+forme_flechie::after {
+	content: " :";
+}
+
+/* Numero de vers */
+numero-vers {
+	display: inline;
+	color: black;
+}
+
+numero-vers::after {
+	content: ",";
+}
+
+numero-vers:last-child::after {
+	content: "";
+}
+
+reference {
+	display: block;
+}
+
+renvoi {
+	content: attr(idref);
+}
