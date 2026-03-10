@@ -1,0 +1,135 @@
+name: Notifications Discord
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: discord-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Préparer les données
+        id: prep
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          REPOSITORY: ${{ github.repository }}
+          ACTOR: ${{ github.actor }}
+          REF_NAME: ${{ github.ref_name }}
+          SHA: ${{ github.sha }}
+          COMPARE_URL: ${{ github.event.compare }}
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+          MODIFIED_FILES: ${{ join(github.event.head_commit.modified, ', ') }}
+          ADDED_FILES: ${{ join(github.event.head_commit.added, ', ') }}
+          REMOVED_FILES: ${{ join(github.event.head_commit.removed, ', ') }}
+        run: |
+          SHORT_SHA="${SHA::7}"
+
+          if [ "$EVENT_NAME" = "push" ]; then
+            TITLE="Nouveau push"
+            COLOR=5763719
+            URL="${COMPARE_URL:-https://github.com/$REPOSITORY}"
+            MESSAGE="${COMMIT_MESSAGE:-"(pas de message disponible)"}"
+          else
+            TITLE="Test manuel du workflow"
+            COLOR=16776960
+            URL="https://github.com/$REPOSITORY/actions"
+            MESSAGE="Exécution déclenchée manuellement"
+          fi
+
+          limit_text () {
+            value="$1"
+            if [ -z "$value" ]; then
+              printf 'Aucun'
+            elif [ ${#value} -gt 900 ]; then
+              printf '%s…' "$(printf '%s' "$value" | cut -c1-900)"
+            else
+              printf '%s' "$value"
+            fi
+          }
+
+          MODIFIED="$(limit_text "$MODIFIED_FILES")"
+          ADDED="$(limit_text "$ADDED_FILES")"
+          REMOVED="$(limit_text "$REMOVED_FILES")"
+          MESSAGE="$(limit_text "$MESSAGE")"
+
+          {
+            echo "title=$TITLE"
+            echo "color=$COLOR"
+            echo "url=$URL"
+            echo "short_sha=$SHORT_SHA"
+            echo "message<<EOF"
+            echo "$MESSAGE"
+            echo "EOF"
+            echo "modified<<EOF"
+            echo "$MODIFIED"
+            echo "EOF"
+            echo "added<<EOF"
+            echo "$ADDED"
+            echo "EOF"
+            echo "removed<<EOF"
+            echo "$REMOVED"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Envoyer la notification Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TITLE: ${{ steps.prep.outputs.title }}
+          COLOR: ${{ steps.prep.outputs.color }}
+          URL: ${{ steps.prep.outputs.url }}
+          SHORT_SHA: ${{ steps.prep.outputs.short_sha }}
+          MESSAGE: ${{ steps.prep.outputs.message }}
+          MODIFIED: ${{ steps.prep.outputs.modified }}
+          ADDED: ${{ steps.prep.outputs.added }}
+          REMOVED: ${{ steps.prep.outputs.removed }}
+          REPOSITORY: ${{ github.repository }}
+          ACTOR: ${{ github.actor }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          jq -n \
+            --arg username "GitHub" \
+            --arg title "$TITLE" \
+            --arg url "$URL" \
+            --arg repo "$REPOSITORY" \
+            --arg actor "$ACTOR" \
+            --arg branch "$REF_NAME" \
+            --arg sha "$SHORT_SHA" \
+            --arg msg "$MESSAGE" \
+            --arg modified "$MODIFIED" \
+            --arg added "$ADDED" \
+            --arg removed "$REMOVED" \
+            --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --argjson color "$COLOR" \
+            '{
+              username: $username,
+              embeds: [
+                {
+                  title: $title,
+                  url: $url,
+                  color: $color,
+                  timestamp: $timestamp,
+                  fields: [
+                    {name: "Dépôt", value: $repo, inline: true},
+                    {name: "Auteur", value: $actor, inline: true},
+                    {name: "Branche", value: $branch, inline: true},
+                    {name: "Commit", value: $sha, inline: true},
+                    {name: "Message", value: $msg, inline: false},
+                    {name: "Modifiés", value: $modified, inline: false},
+                    {name: "Ajoutés", value: $added, inline: false},
+                    {name: "Supprimés", value: $removed, inline: false}
+                  ]
+                }
+              ]
+            }' > payload.json
+
+          curl -sS -H "Content-Type: application/json" \
+               -X POST \
+               -d @payload.json \
+               "$DISCORD_WEBHOOK_URL"
