@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	<xs:import namespace="http://purl.org/dc/elements/1.1/"
+		schemaLocation="https://www.dublincore.org/schemas/xmls/qdc/dc.xsd"/>
+	<!-- importation du schema des métadonnées du dublin core -->
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+	<!-- importation du schéma permettant d’utiliser l’attribut @xml:lang -->
+
+	<xs:element name="nature">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Attribut indiquant la nature grammaticale d’un
+				mot.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="nom"/>
+				<xs:enumeration value="adjectif"/>
+				<xs:enumeration value="verbe"/>
+				<xs:enumeration value="adverbe"/>
+				<xs:enumeration value="pronom"/>
+				<xs:enumeration value="préposition"/>
+				<xs:enumeration value="article"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="genre">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Genre d’un nom, d’un adjectif, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="masculin"/>
+				<xs:enumeration value="féminin"/>
+				<xs:enumeration value="neutre"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nombre">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Nombre d’un nom, d’un adjectif, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="singulier"/>
+				<xs:enumeration value="pluriel"/>
+				<xs:enumeration value="duel"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="cas">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Indication du cas grammatical, i.e. désinence indiquant la
+				fonction grammaticale d’un substantif ou d’un adjectif.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="sujet"/>
+				<xs:enumeration value="régime"/>
+				<xs:enumeration value="nominatif"/>
+				<xs:enumeration value="vocatif"/>
+				<xs:enumeration value="accusatif"/>
+				<xs:enumeration value="génitif"/>
+				<xs:enumeration value="datif"/>
+				<xs:enumeration value="ablatif"/>
+				<xs:enumeration value="locatif"/>
+				<xs:enumeration value="instrumental"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="degre">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Indication du degrès d’un adjectif ou d’un adverbe, c’est à
+				dire s’il est au positif, au comparatif ou au superlatif.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="simple"/>
+				<xs:enumeration value="comparatif"/>
+				<xs:enumeration value="superlatif"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="temps">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Indication des temps verbaux.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="présent"/>
+				<xs:enumeration value="passé"/>
+				<xs:enumeration value="passé simple"/>
+				<xs:enumeration value="futur"/>
+				<xs:enumeration value="futur I"/>
+				<xs:enumeration value="futur II"/>
+				<xs:enumeration value="imparfait"/>
+				<xs:enumeration value="forme en -ant"/>
+				<xs:enumeration value="parfait"/>
+				<xs:enumeration value="plus-que-parfait"/>
+				<xs:enumeration value="futur antérieur"/>
+				<xs:enumeration value="aoriste"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="mode">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Indication des modes verbaux.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="indicatif"/>
+				<xs:enumeration value="subjonctif"/>
+				<xs:enumeration value="conditionnel"/>
+				<xs:enumeration value="participe"/>
+				<xs:enumeration value="infinitif"/>
+				<xs:enumeration value="impératif"/>
+				<xs:enumeration value="optatif"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="personne">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">On indique les personne sous la forme de nombre entier 1, 2, 3
+				pour le singulier, et 4, 5 et 6 pour le pluriel.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:positiveInteger">
+				<xs:pattern value="[1-8]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="construction" type="xs:string">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">On indique les constructions verbales (ou autres): transitif,
+				intransitif, réfléchi, etc. On peut aussi indiquer le type de complément d’un adjectif ou
+				d’un adverbe.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="voix">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Indication de la voix d’un verbe (active, passive,
+				etc.)</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="active"/>
+				<xs:enumeration value="passive"/>
+				<xs:enumeration value="pronominale"/>
+				<xs:enumeration value="moyenne"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="glossaire">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément racine d’une structure XML pour la définition d’un
+				glossaire de terme en ancien français.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="metadonnees" maxOccurs="1"/>
+				<xs:element ref="liste-termes" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute ref="xml:lang" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="metadonnees">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément encapsulant les métadonnées du glossaire ; on utilise
+				le schéma de métadonnées du Dublin Core.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dc:title">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">Titre du document.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="dc:creator">
+					<xs:annotation>
+						<xs:documentation>Auteur du document.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="dc:language">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">Langue principale du document.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="dc:source">
+					<xs:annotation>
+						<xs:documentation xml:lang="fr">Indication de la source du document (i.e. texte source,
+							référence du manuscrit, etc.).</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="liste-termes">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément encapsulant les différents termes constituant le
+				glossaire.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="terme" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="terme">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément permettant de structurer une entrée du glossaire.
+				Chaque entrée comprend un le mot sous sa forme lemmatisée, le nombre d’occurences du terme
+				dans le texte source, une définition/traduction, les formes fléchies du lemme présentes dans
+				le texte source avec leur localisation</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="lemme" maxOccurs="1"/>
+				<xs:element ref="nombre-occurences" maxOccurs="1"/>
+				<xs:choice>
+					<xs:element ref="definition" maxOccurs="1"/>
+					<xs:element ref="renvoi" maxOccurs="1"/>
+				</xs:choice>
+				<xs:element ref="flexions" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="commentaires" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="reference" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="lemme">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Forme lemmatisée du terme.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="traitement_forme_flechie"/>
+			</xs:sequence>
+			<xs:attribute ref="xml:lang"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="nombre-occurences" type="xs:positiveInteger">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Nombre d’occurences du terme présentes dans le texte
+				source.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="definition" type="xs:string">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément de définition/traduction du terme.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="renvoi">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément permettant de gérer les renvois, vers les synonymes
+				par exemple.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="idref" type="xs:IDREF" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="flexions">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément permettant de lister les formes fléchies du terme
+				présentes dans le texte source.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="traitement_forme_flechie" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="reference">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément permettant d’encoder des références (dictionnairiques)
+				en lien avec le terme.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dc:source" maxOccurs="1"/>
+				<xs:element ref="dc:identifier" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute name="type" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="traitement_forme_flechie">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément encapsulant une forme fléchie et la liste de ses
+				positions dans le texte source.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="forme_flechie" maxOccurs="1"/>
+				<xs:element ref="categorie_grammaticale"/>
+				<xs:element ref="positions" minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="commentaires" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="categorie_grammaticale">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">
+				Informations grammaticales sur une forme d’un terme.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="substantif"/>
+				<xs:element ref="adjectif"/>
+				<xs:element ref="verbe"/>
+				<xs:element ref="adverbe"/>
+				<xs:element ref="pronom"/>
+				<xs:element ref="preposition"/>
+				<xs:element ref="article"/>
+				<xs:element ref="interjection"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="substantif">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations grammaticales sur un substantif</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="genre"/>
+				<xs:element ref="nombre"/>
+				<xs:element ref="cas" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="adjectif">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations grammaticales sur un adjectif</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="genre" minOccurs="0"/>
+				<xs:element ref="nombre" minOccurs="0"/>
+				<xs:element ref="cas" minOccurs="0"/>
+				<xs:element ref="construction" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="verbe">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations grammaticales sur un verbe</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="mode" minOccurs="1"/>
+				<xs:element ref="temps" minOccurs="1"/>
+				<xs:element ref="voix" minOccurs="0"/>
+				<xs:element ref="personne" minOccurs="0"/>
+				<xs:element ref="construction" minOccurs="0"/>
+				<xs:element ref="genre" minOccurs="0"/>
+				<xs:element ref="nombre" minOccurs="0"/>
+				<xs:element ref="cas" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="adverbe">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations grammaticales sur un adverbe</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="pronom">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations grammaticales sur un pronom</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="preposition">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations grammaticales sur une préposition</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="construction" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="article">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations grammaticales sur un article</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	
+	<xs:element name="interjection">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Informations grammaticales sur une interjection</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="forme_flechie">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément permettant d’indiquer une forme fléchie du terme.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="xml:lang" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="positions">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément listant les positions connues d’une forme fléchie dans
+				le texte source.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="1" maxOccurs="unbounded">
+					<xs:element ref="numero-vers"/>
+					<xs:element ref="ref-folio"/>
+					<xs:element ref="numero-page"/>
+					<xs:element ref="absence-forme"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="numero-vers" type="xs:positiveInteger">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément permettant d’indiquer un numéro de vers dans le texte
+				source.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="ref-folio">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Référence de folio avec indication au moyen d’attributs du recto/verso (obligatoire) et des colonnes (facultative)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:positiveInteger">
+					<xs:attribute name="cote" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="r"/>
+								<xs:enumeration value="v"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="colonne" use="optional">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[a-z]"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="numero-page" type="xs:positiveInteger">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Indication d’un numéro de page</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="absence-forme">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément codant l’absence d’une occurence (pour les formes utilisées dans le contexte de l’item en adresse)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:element name="commentaires" type="xs:string">
+		<xs:annotation>
+			<xs:documentation xml:lang="fr">Élément permettant de placer des notes explicatives
+				diverses.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>
