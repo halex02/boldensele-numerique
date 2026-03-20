@@ -137,11 +137,11 @@
             <content>
               <rng:group>
                 <rng:oneOrMore>
-                  <rng:ref name="orth" />
+                  <elementRef key="orth" />
                 </rng:oneOrMore>
-                <rng:ref name="gramGrp" />
+                <elementRef key="gramGrp" />
                 <rng:zeroOrMore>
-                  <rng:ref name="cit" />
+                  <elementRef key="cit" />
                 </rng:zeroOrMore>
               </rng:group>
             </content>
