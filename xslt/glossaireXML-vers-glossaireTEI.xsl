@@ -55,7 +55,6 @@
 
     <xsl:template match="gls:liste-termes | gls:liste-formes | gls:liste-attestations">
          <xsl:apply-templates />
-        <xsl:apply-templates select="gls:terme" />
     </xsl:template>
 
     <xsl:template match="gls:terme">
@@ -128,9 +127,9 @@
 
     <xsl:template match="gls:localisation">
         <bibl>
-            <locus>
+            <biblScope unit="folio">
                 <xsl:value-of select="concat('f.&#160;', normalize-space(gls:ref-folio), string(gls:ref-folio/@cote))" />
-            </locus>
+            </biblScope>
         </bibl>
     </xsl:template>
 

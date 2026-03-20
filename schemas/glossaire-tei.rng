@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-03-20T18:01:02Z. . 
+Schema generated from ODD source 2026-03-20T18:43:38Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
  Personnalisation TEI pour un glossaire autonome, en lien avec une édition critique numérique, produit automatiquement depuis un schéma XML de travail. 
@@ -138,7 +138,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4402866e75895-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4410146e75895-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -208,7 +208,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4402866e77576-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4410146e77576-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces

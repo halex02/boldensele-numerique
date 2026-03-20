@@ -369,16 +369,30 @@
             <gloss>Bloc bibliographique d’attestation.</gloss>
             <desc>L’élément <gi>bibl</gi> sert ici à porter la localisation de l’attestation.</desc>
             <content>
-              <rng:ref name="locus" />
+              <rng:ref name="biblScope" />
             </content>
           </elementSpec>
 
-          <elementSpec ident="locus"
+          <elementSpec ident="biblScope"
             mode="change"
             module="core">
             <gloss>Localisation de l’attestation.</gloss>
-            <desc>L’élément <gi>locus</gi> reçoit une indication de foliotation mise en forme de type <q>f. 236v</q>.
+            <desc>L’élément <gi>biblScope</gi> reçoit une indication de foliotation mise en forme de type <q>f. 236v</q>.
             La mise en forme est obtenue via la transformation XSLT à partir du schéma de travail.</desc>
+            <attList>
+              <attDef ident="unit"
+                mode="change"
+                usage="req">
+                <gloss>Unité de localisation.</gloss>
+                <desc>La valeur actuellement produite est <val>folio</val>.
+                </desc>
+                <valList type="closed">
+                  <valItem ident="folio">
+                    <desc>Localisation à l’échelle du folio.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
             <remarks>
               <p>Dans ce projet, on indique simplement le numéro de folio et le côté (r/v), les feuillets du manuscrit Lille, ms. 418 ne comportant qu’une seule colonne de texte.</p>
             </remarks>
