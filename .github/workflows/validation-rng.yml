@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name : Récupérer le dépôt
-          uses: actions/checkout@v4
+          uses: actions/checkout@v5
 
         - name: Installer Java
-          uses: actions/setup-java@v4
+          uses: actions/setup-java@v5
           with:
             distribution: 'temurin'
             java-version: '17'
@@ -31,14 +31,19 @@ jobs:
 
         - name: Vérifier l’arborescence
           run: |
-            ls schemas
-            ls tei/glossaire/test
+            ls -R
           
         - name: Valider les fichiers XML de test
           run: |
-            for file in tei/glossaire/test/*.xml; do
+            shopt -s nullglob
+            files=(tei/glossaire/test/*.xml)
+            if [ ${#files[@]} -eq 0 ]; then
+            echo "Aucun fichier XML trouvé dans tei/glossaire/test/"
+            exit 1
+            fi
+            for file in "${files[@]}"; do
               echo "Validation de $file"
-              java -jar jing-20220510/bin/jing.jar schemas/glossaire-tei.rng "$file"
+              java -jar jing-20220510/bin/jing.jar schema/glossaire-tei.rng "$file"
             done
 
         - name: Notification Discord
