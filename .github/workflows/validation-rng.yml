@@ -43,7 +43,7 @@ jobs:
             fi
             for file in "${files[@]}"; do
               echo "Validation de $file"
-              java -jar jing-20220510/bin/jing.jar schema/glossaire-tei.rng "$file"
+              java -jar jing-20220510/bin/jing.jar schemas/glossaire-tei.rng "$file"
             done
 
         - name: Notification Discord
