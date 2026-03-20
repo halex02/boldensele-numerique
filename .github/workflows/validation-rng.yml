@@ -33,13 +33,13 @@ jobs:
           run: |
             ls -R
           
-        - name: Valider les fichiers XML de test
+        - name: Valider les fichiers XML valides
           run: |
             shopt -s nullglob
-            files=(tei/glossaire/test/*.xml)
+            files=(tei/glossaire/test/valides/*.xml)
 
             if [ ${#files[@]} -eq 0 ]; then
-            echo "Aucun fichier XML trouvé dans tei/glossaire/test/"
+            echo "Aucun fichier XML trouvé dans tei/glossaire/test/valides/"
             exit 1
             fi
 
@@ -47,22 +47,57 @@ jobs:
 
             for file in "${files[@]}"; do
               echo "================================"
-              echo "Validation de $file"
+              echo "Validation attendue (succès) : $file"
+
               if java -jar jing-20220510/bin/jing.jar schemas/glossaire-tei.rng "$file"; then
-                echo "Validation réussie pour $file"
+                echo "✅ Validation réussie pour $file"
               else
-                echo "Validation échouée pour $file"
+                echo "❌ Ce fichier valide a échoué : $file"
                 FAIL=1
               fi
             done
 
             echo "================================"
+
             if [ $FAIL -ne 0 ]; then
-              echo "Validation échouée pour au moins un fichier."
+              echo "Au moins un fichier valide a échoué."
               exit 1
             else
-              echo "Tous les fichiers ont été validés avec succès."
+              echo "Tous les fichiers valides ont été validés avec succès."
             fi
+
+        - name: Valider les fichiers XML invalides
+          run: |
+            shopt -s nullglob
+            files=(tei/glossaire/test/invalides/*.xml)
+
+            if [ ${#files[@]} -eq 0 ]; then
+              echo "Aucun fichier XML trouvé dans tei/glossaire/test/invalides/"
+              exit 1
+            fi
+
+            FAIL=0
+
+            for file in "${files[@]}"; do
+              echo "================================"
+              echo "Validation attendue (échec) : $file"
+
+              if java -jar jing-20220510/bin/jing.jar schemas/glossaire-tei.rng "$file"; then
+                echo "❌ Ce fichier invalide est passé alors qu’il devrait échouer : $file"
+                FAIL=1
+              else
+                echo "✅ Échec attendu pour $file"
+              fi
+            done
+
+            echo "================================"
+
+            if [ $FAIL -ne 0 ]; then
+              echo "Au moins un fichier invalide est passé à tort."
+              exit 1
+            else
+              echo "Tous les fichiers invalides ont bien échoué."
+            fi 
 
         - name: Notification Discord succès
           if: success()
@@ -70,6 +105,7 @@ jobs:
             curl -H "Content-Type: application/json" \
               -d '{"content":"✅ Validation RNG : success — ${{ github.repository }} — branche ${{ github.ref_name }}$"}' \
               "${{ secrets.DISCORD_WEBHOOK_URL }}" 
+        
         - name: Notification Discord échec
           if: failure()
           run: |
