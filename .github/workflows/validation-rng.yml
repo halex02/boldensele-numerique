@@ -37,14 +37,32 @@ jobs:
           run: |
             shopt -s nullglob
             files=(tei/glossaire/test/*.xml)
+
             if [ ${#files[@]} -eq 0 ]; then
             echo "Aucun fichier XML trouvé dans tei/glossaire/test/"
             exit 1
             fi
+
+            FAIL=0
+
             for file in "${files[@]}"; do
+              echo "================================"
               echo "Validation de $file"
-              java -jar jing-20220510/bin/jing.jar schemas/glossaire-tei.rng "$file"
+              if java -jar jing-20220510/bin/jing.jar schemas/glossaire-tei.rng "$file"; then
+                echo "Validation réussie pour $file"
+              else
+                echo "Validation échouée pour $file"
+                FAIL=1
+              fi
             done
+
+            echo "================================"
+            if [ $FAIL -neq 0 ]; then
+              echo "Validation échouée pour au moins un fichier."
+              exit 1
+            else
+              echo "Tous les fichiers ont été validés avec succès."
+            fi
 
         - name: Notification Discord
           if: always()
