@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="glossaire-tei.rnc" type="application/relax-ng-compact-syntax" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Glossaire TEI de test — fichier valide</title>
+        <author>Alexandre Moret</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>Document de test.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Exemple minimal destiné à tester la validation contre le schéma Relax NG compact.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="glossaire" xml:lang="fr">
+        <entry xml:id="gls-0001">
+          <form type="lemme">
+            <orth xml:lang="la">mare</orth>
+            <gramGrp>
+              <pos>substantif</pos>
+              <gram type="genre">neutre</gram>
+              <gram type="nombre">singulier</gram>
+            </gramGrp>
+            <cit type="attestation">
+              <ref target="#w-0001"/>
+              <bibl>
+                <locus>f. 236v</locus>
+              </bibl>
+            </cit>
+            <cit type="attestation">
+              <ref target="#w-0002"/>
+              <bibl>
+                <locus>f. 237r</locus>
+              </bibl>
+            </cit>
+          </form>
+          <sense>
+            <def xml:lang="fr">mer</def>
+          </sense>
+        </entry>
+        <entry xml:id="gls-0002">
+          <form type="lemme">
+            <orth xml:lang="la">pelagus</orth>
+            <gramGrp>
+              <pos>substantif</pos>
+              <gram type="genre">neutre</gram>
+              <gram type="nombre">singulier</gram>
+            </gramGrp>
+          </form>
+          <xr type="synonyme">
+            <ref target="#gls-0001"/>
+          </xr>
+        </entry>
+      </div>
+    </body>
+  </text>
+</TEI>

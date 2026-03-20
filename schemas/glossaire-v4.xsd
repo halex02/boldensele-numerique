@@ -1,6 +1,11 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns="https://halex02.github.io/boldensele-numerique/ns/glossaire"
+  targetNamespace="https://halex02.github.io/boldensele-numerique/ns/glossaire"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified"
+  >
 
   <!-- IMPORTS -->
 

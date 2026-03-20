@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="glossaire-tei.rnc" type="application/relax-ng-compact-syntax" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Glossaire TEI de test — fichier invalide 02</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Document de test.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Exemple volontairement invalide : valeur interdite pour gram/@type.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="glossaire" xml:lang="fr">
+        <entry xml:id="gls-0102">
+          <form type="lemme">
+            <orth xml:lang="la">mare</orth>
+            <gramGrp>
+              <pos>substantif</pos>
+              <gram type="truc">neutre</gram>
+            </gramGrp>
+          </form>
+          <sense>
+            <def xml:lang="fr">mer</def>
+          </sense>
+        </entry>
+      </div>
+    </body>
+  </text>
+</TEI>

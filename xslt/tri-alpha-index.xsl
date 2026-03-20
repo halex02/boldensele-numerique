@@ -10,7 +10,7 @@
 	Quand on crée un template qui match le motif générique *,
 	tout template spécifique va prendre le pas dessus
 	-->
-	<xsl:template match="*">
+	<!-- <xsl:template match="*">
 		<xsl:element name="{local-name()}">
 			<xsl:for-each select="attribute::*">
 				<xsl:attribute name="{local-name()}">
@@ -19,6 +19,11 @@
 			</xsl:for-each>
 			<xsl:apply-templates/>
 		</xsl:element>
+	</xsl:template> -->
+	<xsl:template match="@*|node()">
+		<xsl:copy>
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:copy>
 	</xsl:template>
 	
 	<!-- Template qui match l’élément racine -->

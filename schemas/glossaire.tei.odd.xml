@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+  xml:lang="fr">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>ODD du glossaire TEI cible</title>
+        <author>Alexandre Moret</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>Document de travail.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>ODD destiné à documenter et personnaliser le glossaire TEI produit par la feuille XSLT glossaireXML-vers-glossaireTEI.xsl.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Ce fichier documente la structure TEI de sortie : TEI / teiHeader / text / body / div[@type='glossaire'] / entry / form / orth / gramGrp / pos / gram / sense / def / xr / ref / cit / bibl / locus.</p>
+      </projectDesc>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">Français</language>
+        <language ident="la">Latin</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-03-20">Génération d’une structure initiale pour un ODD décrivant la structure du glossaire TEI via le modèle d’IA GPT-5.3 
+      à partir du modèle conceptuel prévu pour la transformation XSLT depuis le schéma XML de travail vers le format TEI. Éléments de documentation enrichis manuellement ensuite.</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <schemaSpec ident="glossaire-tei"
+        start="TEI"
+        docLang="fr">
+
+        <moduleRef key="core" />
+        <moduleRef key="header" />
+        <moduleRef key="textstructure" />
+        <moduleRef key="dictionaries" />
+        <moduleRef key="linking" />
+        <moduleRef key="tagdocs" />
+
+        <desc>Personnalisation TEI pour un glossaire autonome, en lien avec une édition critique numérique, produit automatiquement depuis un schéma XML de travail.</desc>
+
+        <specGrp xml:id="glossaire-tei-specs">
+          <head>Personnalisation du glossaire TEI</head>
+
+          <elementSpec ident="TEI"
+            mode="change"
+            module="tei">
+            <desc>Document TEI racine du glossaire.</desc>
+          </elementSpec>
+
+          <elementSpec ident="teiHeader"
+            mode="change"
+            module="header">
+            <desc>En-tête documentaire du glossaire TEI.</desc>
+            <remarks>
+              <p>À compléter : préciser la politique de description bibliographique et les champs effectivement remplis.</p>
+            </remarks>
+          </elementSpec>
+
+          <elementSpec ident="div"
+            mode="change"
+            module="textstructure">
+            <gloss>Division textuelle contenant le glossaire.</gloss>
+            <desc>Dans ce projet, l’élément <gi>div</gi> sert à porter le glossaire dans le corps du document.</desc>
+            <attList>
+              <attDef ident="type"
+                mode="change"
+                usage="req">
+                <gloss>Type de division.</gloss>
+                <desc>Pour le glossaire TEI généré, la valeur retenue est <val>glossaire</val>.
+                </desc>
+                <valList type="closed">
+                  <valItem ident="glossaire">
+                    <desc>Division contenant les entrées du glossaire.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+            <exemplum>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <div type="glossaire"
+                  xml:lang="fr">
+                  <entry xml:id="gls-0001" />
+                </div>
+              </egXML>
+            </exemplum>
+          </elementSpec>
+
+          <elementSpec ident="entry"
+            mode="change"
+            module="dictionaries">
+            <gloss>Entrée lexicale du glossaire TEI.</gloss>
+            <desc>Chaque entrée contient au moins une ou plusieurs formes, puis soit un sens défini, soit un renvoi interne pour les cas de synonymie.</desc>
+            <content>
+              <rng:group>
+                <rng:oneOrMore>
+                  <rng:ref name="form" />
+                </rng:oneOrMore>
+                <rng:choice>
+                  <rng:ref name="sense" />
+                  <rng:ref name="xr" />
+                </rng:choice>
+              </rng:group>
+            </content>
+            <remarks>
+              <p>L’ordre retenu est le suivant :
+                une ou plusieurs formes (<gi>form</gi>), suivies soit d’un bloc sémantique (<gi>sense</gi>),
+                soit d’un renvoi (<gi>xr</gi>)</p>
+            </remarks>
+            <exemplum>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <entry xml:id="gls-0001">
+                  <form type="lemme">
+                    <orth xml:lang="la">mare</orth>
+                  </form>
+                  <sense>
+                    <def xml:lang="fr">mer</def>
+                  </sense>
+                </entry>
+              </egXML>
+            </exemplum>
+          </elementSpec>
+
+          <elementSpec ident="form"
+            mode="change"
+            module="dictionaries">
+            <gloss>Forme rattachée à une entrée.</gloss>
+            <desc>L’élément <gi>form</gi> sert à encoder les formes du glossaire, qu’il s’agisse du lemme, d’une variante ou d’une flexion.</desc>
+            <content>
+              <rng:group>
+                <rng:oneOrMore>
+                  <rng:ref name="orth" />
+                </rng:oneOrMore>
+                <rng:ref name="gramGrp" />
+                <rng:zeroOrMore>
+                  <rng:ref name="cit" />
+                </rng:zeroOrMore>
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type"
+                mode="change"
+                usage="opt">
+                <gloss>Type de forme.</gloss>
+                <desc>Les valeurs retenues suivent la logique du fichier source et restent en français.</desc>
+                <valList type="closed">
+                  <valItem ident="lemme">
+                    <desc>Forme vedette du terme.</desc>
+                  </valItem>
+                  <valItem ident="variante">
+                    <desc>Variante graphique ou lexicale.</desc>
+                  </valItem>
+                  <valItem ident="flexion">
+                    <desc>Forme fléchie attestée.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+            <remarks>
+              <p>Les Guidelines de la TEI proposent une typologie plus large. Nous nous limiterons ici à « lemme » et « flexion », ainsi qu’à variante si nécessaire. 
+              La valeur « variante » n’est théoriquement pas utilisée, puisque l’édition est normalisée et non diplomatique.</p>
+            </remarks>
+          </elementSpec>
+
+          <elementSpec ident="orth"
+            mode="change"
+            module="dictionaries">
+            <gloss>Graphie d’une forme.</gloss>
+            <desc>L’élément <gi>orth</gi> contient la graphie d’une forme et porte un attribut <att>xml:lang</att>.
+            </desc>
+            <remarks>
+              <p>La normalisation ne suit pas les lettres ramistes (pas de distinction i/j et u/v suivant l’usage en tant que voyelle ou consonne).
+              Les homographes sont normalisés: le r rotunda est encodé comme un r simple, le y est encodé comme un i, le s long comme des s courts.</p>
+            </remarks>
+          </elementSpec>
+
+          <elementSpec ident="gramGrp"
+            mode="change"
+            module="dictionaries">
+            <gloss>Bloc d’informations grammaticales.</gloss>
+            <desc>L’élément <gi>gramGrp</gi> regroupe la catégorie grammaticale principale et les traits grammaticaux associés.</desc>
+              <content>
+                <rng:group>
+                  <rng:ref name="pos" />
+                  <rng:zeroOrMore>
+                    <rng:ref name="gram" />
+                  </rng:zeroOrMore>
+                </rng:group>
+              </content>
+          </elementSpec>
+
+          <elementSpec ident="pos"
+            mode="change"
+            module="dictionaries">
+            <gloss>Catégorie grammaticale principale.</gloss>
+            <desc>Dans le glossaire TEI généré, la valeur de <gi>pos</gi> reste en français.</desc>
+            <remarks>
+              <p>Valeurs théoriquement produites par la feuille XSLT : substantif, adjectif, verbe, adverbe, pronom, preposition, article, interjection.
+              Dans la pratique les valeurs pronom, preposition, article et interjection seront absentes.</p>
+            </remarks>
+          </elementSpec>
+
+          <elementSpec ident="gram"
+            mode="change"
+            module="dictionaries">
+            <gloss>Trait grammatical typé.</gloss>
+            <desc>L’élément <gi>gram</gi> sert à encoder les traits grammaticaux secondaires à l’aide d’un attribut <att>type</att>.
+            </desc>
+            <attList>
+              <attDef ident="type"
+                mode="change"
+                usage="req">
+                <gloss>Type de trait grammatical.</gloss>
+                <desc>Liste actuelle des types produits par la feuille XSLT.</desc>
+                <valList type="closed">
+                  <valItem ident="genre">
+                    <desc>Genre grammatical.</desc>
+                  </valItem>
+                  <valItem ident="nombre">
+                    <desc>Nombre grammatical.</desc>
+                  </valItem>
+                  <valItem ident="cas">
+                    <desc>Cas grammatical.</desc>
+                  </valItem>
+                  <valItem ident="degre">
+                    <desc>Degré de l’adjectif ou de l’adverbe.</desc>
+                  </valItem>
+                  <valItem ident="construction">
+                    <desc>Construction grammaticale.</desc>
+                  </valItem>
+                  <valItem ident="mode">
+                    <desc>Mode verbal.</desc>
+                  </valItem>
+                  <valItem ident="temps">
+                    <desc>Temps verbal.</desc>
+                  </valItem>
+                  <valItem ident="voix">
+                    <desc>Voix verbale.</desc>
+                  </valItem>
+                  <valItem ident="personne">
+                    <desc>Personne verbale.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+            <remarks>
+              <p>Les valeurs des traits grammaticaux ne sont pas fixées. Seuls les types de traits qui sont définis et stabilisés.
+              La normalisation des valeurs est assurée en amont de la conversion XSLT par le schéma de travail qui les définit en tant que liste à choix.</p>
+            </remarks>
+          </elementSpec>
+
+          <elementSpec ident="sense"
+            mode="change"
+            module="dictionaries">
+            <gloss>Bloc sémantique de l’entrée.</gloss>
+            <desc>Dans ce projet, <gi>sense</gi> sert à contenir une définition ou traduction succincte du terme.</desc>
+            <content>
+              <rng:oneOrMore>
+              <rng:ref name="def" />
+              </rng:oneOrMore>
+              </content>
+          </elementSpec>
+
+          <elementSpec ident="def"
+            mode="change"
+            module="dictionaries">
+            <gloss>Définition ou traduction.</gloss>
+            <desc>L’élément <gi>def</gi> reçoit le contenu textuel de la définition source et porte la langue principale du glossaire.</desc>
+          </elementSpec>
+
+          <elementSpec ident="xr"
+            mode="change"
+            module="dictionaries">
+            <gloss>Renvoi lexical interne.</gloss>
+            <desc>L’élément <gi>xr</gi> sert à encoder les renvois entre entrées du glossaire dans les cas de synonymie.</desc>
+            <content>
+              <rng:ref name="ref" />
+            </content>
+            <attList>
+              <attDef ident="type"
+                mode="change"
+                usage="req">
+                <gloss>Type de renvoi.</gloss>
+                <desc>La valeur actuellement produite est <val>synonyme</val>.
+                </desc>
+                <valList type="closed">
+                  <valItem ident="synonyme">
+                    <desc>Renvoi synonymique interne au glossaire.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+            <exemplum>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xr type="synonyme">
+                  <ref target="#gls-0010" />
+                </xr>
+              </egXML>
+            </exemplum>
+            <remarks>
+              <p>La possibilité d’autres types de renvois (antonyme, hyperonyme, etc.) est à envisager, mais pour l’instant, seule la synonymie est traitée.</p>
+            </remarks>
+          </elementSpec>
+
+          <elementSpec ident="ref"
+            mode="change"
+            module="linking">
+            <gloss>Référence interne.</gloss>
+            <desc>L’élément <gi>ref</gi> sert aussi bien pour les renvois synonymiques que pour les attestations reliées à une occurrence textuelle.</desc>
+            <remarks>
+              <p>Les valeurs de <att>target</att> doivent correspondre aux attributs <att>xml:id</att> des éléments référencés, en suivant une convention d’identifiants préfixés. 
+              Pour les renvois internes, la valeur #gls-0001 de l’attribut <att>target</att> de l’élément <gi>ref</gi> doit correspondre à la valeur gls-0001 de l’attribut <att>xml:id</att> de l’élément <gi>entry</gi>.
+              Pour les renvois externes vers les formes attestées dans le texte, la valeur #w-0001 de l’attribut <att>target</att> de l’élément <gi>ref</gi> doit correspondre à la valeur w-0001 de l’attribut <att>xml:id</att> 
+              de l’élément <gi>w</gi> portant la forme attestée.
+              </p>
+              <p>Dans l’éventualité où on aurait besoin des identifiants des entrées d’index, la convention sera de les préfixer par prs (ex. #prs-0001), par loc (ex. #loc-0001) et par src (ex. #src-0001) respectivement pour 
+              les entrées de l’index nominum, l’index locorum et l’index fontium. Pas d’index rerum prévu pour le moment, mais le cas échéant, une convention similaire sera appliquée.</p>
+            </remarks>
+          </elementSpec>
+
+          <elementSpec ident="cit"
+            mode="change"
+            module="core">
+            <gloss>Bloc d’attestation.</gloss>
+            <desc>Dans ce projet, <gi>cit</gi> sert à encoder le lien entre une attestation localisée dans le texte édité et une forme dans le glossaire.</desc>
+            <content>
+              <rng:group>
+                <rng:ref name="ref" />
+                <rng:ref name="bibl" />
+              </rng:group>
+            </content>
+            <attList>
+              <attDef ident="type"
+                mode="change"
+                usage="req">
+                <gloss>Type de citation.</gloss>
+                <desc>La valeur actuellement produite est <val>attestation</val>.
+                </desc>
+                <valList type="closed">
+                  <valItem ident="attestation">
+                    <desc>Attestation d’une forme dans le texte.</desc>
+                  </valItem>
+                </valList>
+              </attDef>
+            </attList>
+            <exemplum>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <cit type="attestation">
+                  <ref target="#w-0001" />
+                  <bibl>
+                    <locus>f. 236v</locus>
+                  </bibl>
+                </cit>
+              </egXML>
+            </exemplum>
+          </elementSpec>
+
+          <elementSpec ident="bibl"
+            mode="change"
+            module="core">
+            <gloss>Bloc bibliographique d’attestation.</gloss>
+            <desc>L’élément <gi>bibl</gi> sert ici à porter la localisation de l’attestation.</desc>
+            <content>
+              <rng:ref name="locus" />
+            </content>
+          </elementSpec>
+
+          <elementSpec ident="locus"
+            mode="change"
+            module="core">
+            <gloss>Localisation de l’attestation.</gloss>
+            <desc>L’élément <gi>locus</gi> reçoit une indication de foliotation mise en forme de type <q>f. 236v</q>.
+            La mise en forme est obtenue via la transformation XSLT à partir du schéma de travail.</desc>
+            <remarks>
+              <p>Dans ce projet, on indique simplement le numéro de folio et le côté (r/v), les feuillets du manuscrit Lille, ms. 418 ne comportant qu’une seule colonne de texte.</p>
+            </remarks>
+          </elementSpec>
+        </specGrp>
+      </schemaSpec>
+
+      <div type="documentation">
+        <head>Notes à compléter</head>
+        <p>Compléter ici les justifications éditoriales, les conventions de valeurs en français, les règles de transformation XSLT et les choix de modélisation TEI retenus.</p>
+      </div>
+    </body>
+  </text>
+</TEI>

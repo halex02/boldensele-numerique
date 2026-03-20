@@ -1,0 +1,52 @@
+name: Validation RNG
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+  jobs:
+    validate:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name : Récupérer le dépôt
+          uses: actions/checkout@v4
+
+        - name: Installer Java
+          uses: actions/setup-java@v4
+          with:
+            distribution: 'temurin'
+            java-version: '17'
+        
+        - name: Télécharger Jing
+          run: |
+            curl -L -o jing.zip https://github.com/relaxng/jing-trang/releases/download/V20220510/jing-20220510.zip
+            unzip jing.zip
+        
+        - name: Vérifier jing
+          run: |
+            ls
+            ls jing-20220510
+            ls jing-20220510/bin
+
+        - name: Vérifier l’arborescence
+          run: |
+            ls schemas
+            ls tei/glossaire/test
+          
+        - name: Valider les fichiers XML de test
+          run: |
+            for file in tei/glossaire/test/*.xml; do
+              echo "Validation de $file"
+              java -jar jing-20220510/bin/jing.jar schemas/glossaire-tei.rng "$file"
+            done
+            
+        - name: Notification Discord
+          if: always()
+          run: |
+            curl -H "Content-Type: application/json" \
+                 -d "{
+                   \"content\": \"Validation RNG : ${{ job.status }} − ${{ github.repository }} − branche ${{ github.ref_name }}\"
+                 }" \
+                  ${{ secrets.DISCORD_WEBHOOK_URL }}"

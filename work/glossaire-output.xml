@@ -1,0 +1,2320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glossaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="../schemas/glossaire-v4.xsd"
+           xml:lang="fr">
+   <metadonnees>
+      <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Glossaire</dc:title>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Moret Alexandre</dc:creator>
+      <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">fr</dc:language>
+      <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">Guillaume de Boldensele</dc:source>
+   </metadonnees>
+   <liste-termes>
+      <terme id="gls-0001">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la"/>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0005">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0013">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0016">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0104">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0114">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>5</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0002">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">abinuicem</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0042">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0003">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">aeris</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0127">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0004">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">alexandre</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0097">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0005">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">angelicis</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0082">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0006">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">apparenti</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0091">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0007">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">armatam</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0022">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0008">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ascendi</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0025">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0009">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">asserunt</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0094">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0010">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">attingit</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0050">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0011">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">austram</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0048">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0012">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">beatus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0073">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0013">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">bene</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0021">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0014">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">bonorumque</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0131">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0015">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">brachio</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0061">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0016">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">brachium</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0062">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0017">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">braciis</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0041">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0018">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">bracio</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0049">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0092">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0019">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">bracium</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0103">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0020">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">bucca</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0113">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0021">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">cingitur</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0141">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0022">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">circumfluit</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0060">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0023">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ciuitas</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0121">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0024">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ciuitate</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0149">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0025">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ciuitatem</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0012">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0086">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0026">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">communiter</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0070">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0027">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">confluentia</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0133">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0028">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">consequens</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0100">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0029">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">constructum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0083">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0030">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">continuatur</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0054">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0064">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0102">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>3</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0031">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">copulatur</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0093">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0032">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">cronice</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0108">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0033">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">decorauit</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0159">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0034">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">dicitur</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0014">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0034">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0063">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0088">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0115">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0120">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>6</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0035">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">disterminans</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0043">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0036">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">diuidit</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0106">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0037">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">diximus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0105">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0038">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ecclesia</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0155">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0039">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ecclesie</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0151">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0040">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">egressus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0006">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0041">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">est</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0156">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0157">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0042">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">experientis</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0096">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0043">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">figura</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0142">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0044">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">fuerunt</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0152">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0045">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">fundauit</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0158">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0046">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">galeam</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0020">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0047">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">gurgitem</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0098">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0048">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">habet</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0044">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0067">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0136">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>3</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0049">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">habitaculum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0076">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0050">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">insistebant</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0033">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0051">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">insulam</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0068">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0052">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">interiacet</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0040">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0053">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">iter</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0027">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0054">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">itinere</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0001">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0055">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">latera</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0145">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0056">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">littore</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0116">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0057">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">littus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0010">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0058">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">locata</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0134">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0059">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">loco</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0125">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0060">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">magno</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0065">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0061">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">manibus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0081">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0062">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">mare</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0035">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0055">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0069">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0084">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0089">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0146">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>6</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0063">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">mari</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0056">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0066">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0072">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0090">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>4</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0064">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">maribus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0101">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0065">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">maris</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0011">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0128">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0066">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">marmorei</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0080">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0067">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">martiri</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0077">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0068">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">maximo</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0058">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0069">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">maximum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0138">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0070">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">metropolis</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0117">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0071">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">modum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0078">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0072">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">mundi</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0037">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0124">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0073">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">munita</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0024">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0074">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">muris</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0139">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0075">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">natiuitatis</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0008">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0076">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">naute</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0029">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0077">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">nixi</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0095">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0078">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">noua</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0119">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0079">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">occidente</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0046">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0080">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">omnia</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0023">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0081">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">omnium</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0132">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0082">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">optimo</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0123">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0083">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">optimum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0137">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0084">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">orbem</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0059">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0085">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">orientem</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0047">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0085">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0086">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">pacens</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0143">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0087">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">papa</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0074">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0088">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">pars</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0004">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0089">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">partibus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0038">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0090">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">perueni</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0019">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0091">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">portum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0135">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0092">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">principalibus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0036">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0093">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">profecto</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0107">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0094">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">propinquius</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0099">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0095">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">prosequendum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0026">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0096">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">prospere</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0018">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0097">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">prouincia</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0111">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0098">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">puppi</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0032">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0099">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ratione</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0126">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0100">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">remis</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0030">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0101">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ripis</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0015">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0102">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">sancta</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0003">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0103">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">scilicet</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0057">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0104">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">sepe</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0109">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0105">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">septentrione</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0045">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0106">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">sita</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0118">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0107">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">sitam</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0017">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0108">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">solempnissima</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0122">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0109">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">strictum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0051">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0110">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">submersus</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0075">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0111">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">sunt</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0147">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0150">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0153">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>3</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0112">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">tangunt</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0110">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0113">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">templi</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0079">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0114">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">tenet</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0087">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0154">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0115">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">terra</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0002">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0007">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0116">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">terram</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0148">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0117">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">terre</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0129">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0118">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">transiens</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0009">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0119">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">triangulari</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0144">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0120">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ualidissimis</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0140">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0121">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">uelo</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0031">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0122">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">uidelicet</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0039">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0123">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">uinorum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0130">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0124">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">ultramarinum</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0028">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>1</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0125">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">uocatur</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0053">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0071">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+      <terme id="gls-0126">
+         <liste-formes>
+            <forme type="lemme">
+               <graphie xml:lang="la">uulgariter</graphie>
+               <categorie_grammaticale>À compléter</categorie_grammaticale>
+               <liste-attestations>
+                  <attestation idref="#w-0052">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+                  <attestation idref="#w-0112">
+                     <localisation>
+                        <ref-folio cote="v">236</ref-folio>
+                     </localisation>
+                  </attestation>
+               </liste-attestations>
+            </forme>
+         </liste-formes>
+         <nombre-occurrences>2</nombre-occurrences>
+         <definition>À compléter</definition>
+      </terme>
+   </liste-termes>
+</glossaire>
