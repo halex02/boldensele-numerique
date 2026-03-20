@@ -57,18 +57,22 @@ jobs:
             done
 
             echo "================================"
-            if [ $FAIL -neq 0 ]; then
+            if [ $FAIL -ne 0 ]; then
               echo "Validation échouée pour au moins un fichier."
               exit 1
             else
               echo "Tous les fichiers ont été validés avec succès."
             fi
 
-        - name: Notification Discord
-          if: always()
+        - name: Notification Discord succès
+          if: success()
           run: |
             curl -H "Content-Type: application/json" \
-                 -d "{
-                   \"content\": \"Validation RNG : ${{ job.status }} − ${{ github.repository }} − branche ${{ github.ref_name }}\"
-                 }" \
-                  ${{ secrets.DISCORD_WEBHOOK_URL }}"
+              -d '{"content":"✅ Validation RNG : success — halex02/boldensele-numerique — branche main"}' \
+              "${{ secrets.DISCORD_WEBHOOK_URL }}" 
+        - name: Notification Discord échec
+          if: failure()
+          run: |
+            curl -H "Content-Type: application/json" \
+              -d '{"content":"❌ Validation RNG : failure — halex02/boldensele-numerique — branche main"}' \
+              "${{ secrets.DISCORD_WEBHOOK_URL }}"
