@@ -29,13 +29,13 @@
             <cit type="attestation">
               <ref target="#w-0001"/>
               <bibl>
-                <locus>f. 236v</locus>
+                <biblScope unit="folio">f. 236v</biblScope>
               </bibl>
             </cit>
             <cit type="attestation">
               <ref target="#w-0002"/>
               <bibl>
-                <locus>f. 237r</locus>
+                <biblScope unit="folio">f. 237r</biblScope>
               </bibl>
             </cit>
           </form>
