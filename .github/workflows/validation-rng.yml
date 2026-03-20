@@ -5,7 +5,7 @@ on:
   pull_request:
   workflow_dispatch:
 
-  jobs:
+  job:
     validate:
       runs-on: ubuntu-latest
 
@@ -41,7 +41,7 @@ on:
               echo "Validation de $file"
               java -jar jing-20220510/bin/jing.jar schemas/glossaire-tei.rng "$file"
             done
-            
+
         - name: Notification Discord
           if: always()
           run: |
