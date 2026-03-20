@@ -113,7 +113,8 @@
             <remarks>
               <p>L’ordre retenu est le suivant :
                 une ou plusieurs formes (<gi>form</gi>), suivies soit d’un bloc sémantique (<gi>sense</gi>),
-                soit d’un renvoi (<gi>xr</gi>)</p>
+                soit d’un renvoi (<gi>xr</gi>)
+              </p>
             </remarks>
             <exemplum>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -135,15 +136,17 @@
             <gloss>Forme rattachée à une entrée.</gloss>
             <desc>L’élément <gi>form</gi> sert à encoder les formes du glossaire, qu’il s’agisse du lemme, d’une variante ou d’une flexion.</desc>
             <content>
-              <rng:group>
-                <rng:oneOrMore>
-                  <elementRef key="orth" />
-                </rng:oneOrMore>
-                <elementRef key="gramGrp" />
-                <rng:zeroOrMore>
-                  <elementRef key="cit" />
-                </rng:zeroOrMore>
-              </rng:group>
+              <sequence>
+                <elementRef key="orth"
+                  minOccurs="1"
+                  maxOccurs="1" />
+                <elementRef key="gramGrp"
+                  minOccurs="0"
+                  maxOccurs="1" />
+                <elementRef key="cit"
+                  minOccurs="0"
+                  maxOccurs="unbounded" />
+              </sequence>
             </content>
             <attList>
               <attDef ident="type"
@@ -187,14 +190,14 @@
             module="dictionaries">
             <gloss>Bloc d’informations grammaticales.</gloss>
             <desc>L’élément <gi>gramGrp</gi> regroupe la catégorie grammaticale principale et les traits grammaticaux associés.</desc>
-              <content>
-                <rng:group>
-                  <rng:ref name="pos" />
-                  <rng:zeroOrMore>
-                    <rng:ref name="gram" />
-                  </rng:zeroOrMore>
-                </rng:group>
-              </content>
+            <content>
+              <rng:group>
+                <rng:ref name="pos" />
+                <rng:zeroOrMore>
+                  <rng:ref name="gram" />
+                </rng:zeroOrMore>
+              </rng:group>
+            </content>
           </elementSpec>
 
           <elementSpec ident="pos"
@@ -264,9 +267,9 @@
             <desc>Dans ce projet, <gi>sense</gi> sert à contenir une définition ou traduction succincte du terme.</desc>
             <content>
               <rng:oneOrMore>
-              <rng:ref name="def" />
+                <rng:ref name="def" />
               </rng:oneOrMore>
-              </content>
+            </content>
           </elementSpec>
 
           <elementSpec ident="def"
