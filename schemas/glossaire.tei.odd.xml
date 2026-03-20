@@ -47,9 +47,6 @@
 
         <desc>Personnalisation TEI pour un glossaire autonome, en lien avec une édition critique numérique, produit automatiquement depuis un schéma XML de travail.</desc>
 
-        <specGrp xml:id="glossaire-tei-specs">
-          <head>Personnalisation du glossaire TEI</head>
-
           <elementSpec ident="TEI"
             mode="change"
             module="tei">
@@ -113,8 +110,7 @@
             <remarks>
               <p>L’ordre retenu est le suivant :
                 une ou plusieurs formes (<gi>form</gi>), suivies soit d’un bloc sémantique (<gi>sense</gi>),
-                soit d’un renvoi (<gi>xr</gi>)
-              </p>
+                soit d’un renvoi (<gi>xr</gi>)</p>
             </remarks>
             <exemplum>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -136,21 +132,19 @@
             <gloss>Forme rattachée à une entrée.</gloss>
             <desc>L’élément <gi>form</gi> sert à encoder les formes du glossaire, qu’il s’agisse du lemme, d’une variante ou d’une flexion.</desc>
             <content>
-              <sequence>
-                <elementRef key="orth"
-                  minOccurs="1"
-                  maxOccurs="1" />
-                <elementRef key="gramGrp"
-                  minOccurs="1"
-                  maxOccurs="1" />
-                <elementRef key="cit"
-                  minOccurs="0"
-                  maxOccurs="unbounded" />
-              </sequence>
+              <rng:group>
+                <rng:oneOrMore>
+                  <rng:ref name="orth" />
+                </rng:oneOrMore>
+                <rng:ref name="gramGrp" />
+                <rng:zeroOrMore>
+                  <rng:ref name="cit" />
+                </rng:zeroOrMore>
+              </rng:group>
             </content>
             <attList>
               <attDef ident="type"
-                mode="change"
+                mode="replace"
                 usage="opt">
                 <gloss>Type de forme.</gloss>
                 <desc>Les valeurs retenues suivent la logique du fichier source et restent en français.</desc>
@@ -190,14 +184,14 @@
             module="dictionaries">
             <gloss>Bloc d’informations grammaticales.</gloss>
             <desc>L’élément <gi>gramGrp</gi> regroupe la catégorie grammaticale principale et les traits grammaticaux associés.</desc>
-            <content>
-              <rng:group>
-                <rng:ref name="pos" />
-                <rng:zeroOrMore>
-                  <rng:ref name="gram" />
-                </rng:zeroOrMore>
-              </rng:group>
-            </content>
+              <content>
+                <rng:group>
+                  <rng:ref name="pos" />
+                  <rng:zeroOrMore>
+                    <rng:ref name="gram" />
+                  </rng:zeroOrMore>
+                </rng:group>
+              </content>
           </elementSpec>
 
           <elementSpec ident="pos"
@@ -267,9 +261,9 @@
             <desc>Dans ce projet, <gi>sense</gi> sert à contenir une définition ou traduction succincte du terme.</desc>
             <content>
               <rng:oneOrMore>
-                <rng:ref name="def" />
+              <rng:ref name="def" />
               </rng:oneOrMore>
-            </content>
+              </content>
           </elementSpec>
 
           <elementSpec ident="def"
@@ -400,7 +394,6 @@
               <p>Dans ce projet, on indique simplement le numéro de folio et le côté (r/v), les feuillets du manuscrit Lille, ms. 418 ne comportant qu’une seule colonne de texte.</p>
             </remarks>
           </elementSpec>
-        </specGrp>
       </schemaSpec>
 
       <div type="documentation">

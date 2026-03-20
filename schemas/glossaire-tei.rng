@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-03-20T19:23:51Z. . 
+Schema generated from ODD source 2026-03-20T19:46:48Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
  Personnalisation TEI pour un glossaire autonome, en lien avec une édition critique numérique, produit automatiquement depuis un schéma XML de travail. 
@@ -138,7 +138,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4446910e75895-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4477089e74208-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -208,7 +208,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4446910e77576-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4477089e75889-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -3820,21 +3820,6 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
          <ref name="tei_model.global.edit"/>
       </choice>
    </define>
-   <define name="tei_model.biblPart">
-      <choice>
-         <ref name="tei_model.respLike"/>
-         <ref name="tei_model.imprintPart"/>
-         <ref name="tei_quote"/>
-         <ref name="tei_series"/>
-         <ref name="tei_citedRange"/>
-         <ref name="tei_bibl"/>
-         <ref name="tei_relatedItem"/>
-         <ref name="tei_textLang"/>
-         <ref name="tei_edition"/>
-         <ref name="tei_extent"/>
-         <ref name="tei_availability"/>
-      </choice>
-   </define>
    <define name="tei_model.frontPart">
       <choice>
          <ref name="tei_model.frontPart.drama"/>
@@ -4488,22 +4473,22 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
    </define>
    <define name="tei_cit">
       <element name="cit">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation) citation provenant d'un autre document comprenant la référence bibliographique de sa source. Dans un dictionnaire il peut contenir un exemple avec au moins une occurrence du mot employé dans l’acception qui est décrite, ou une traduction du mot-clé, ou un exemple. [3.3.3. Quotation 4.3.1. Grouped Texts 10.3.5.1. Examples]</a:documentation>
-         <oneOrMore>
-            <choice>
-               <ref name="tei_model.biblLike"/>
-               <ref name="tei_model.egLike"/>
-               <ref name="tei_model.entryPart"/>
-               <ref name="tei_model.global"/>
-               <ref name="tei_model.graphicLike"/>
-               <ref name="tei_model.ptrLike"/>
-               <ref name="tei_model.attributable"/>
-               <ref name="tei_q"/>
-            </choice>
-         </oneOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bloc d’attestation.) Dans ce projet, <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;cit&gt;</code> sert à encoder le lien entre une attestation localisée dans le texte édité et une forme dans le glossaire. [3.3.3. Quotation 4.3.1. Grouped Texts 10.3.5.1. Examples]</a:documentation>
+         <group>
+            <ref name="tei_ref"/>
+            <ref name="tei_bibl"/>
+         </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.cmc.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Type de citation.) La valeur actuellement produite est attestation.</a:documentation>
+            <choice>
+               <value>attestation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Attestation d’une forme dans le texte.</a:documentation>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -5189,7 +5174,8 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
    </define>
    <define name="tei_ref">
       <element name="ref">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(référence) définit une référence vers un autre emplacement, la référence étant éventuellement modifiée ou complétée par un texte ou un commentaire. [3.7. Simple Links and Cross-References 17.1. Links]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Référence interne.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;ref&gt;</code> sert aussi bien pour les renvois synonymiques que pour les attestations reliées à une occurrence textuelle. [3.7. Simple Links and Cross-References 17.1. Links]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5832,10 +5818,19 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
    </define>
    <define name="tei_biblScope">
       <element name="biblScope">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(extension d'une référence bibliographique) définit l'extension d'une référence bibliographique, comme par exemple une liste de numéros de page, ou le nom d'une subdivision d'une oeuvre plus grande. [3.12.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Localisation de l’attestation.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;biblScope&gt;</code> reçoit une indication de foliotation mise en forme de type f. 236v. La mise en forme est obtenue via la transformation XSLT à partir du schéma de travail. [3.12.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.citing.attributes"/>
+         <ref name="tei_att.citing.attribute.from"/>
+         <ref name="tei_att.citing.attribute.to"/>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Unité de localisation.) La valeur actuellement produite est folio.</a:documentation>
+            <choice>
+               <value>folio</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Localisation à l’échelle du folio.</a:documentation>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -5860,20 +5855,9 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
    </define>
    <define name="tei_bibl">
       <element name="bibl">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(référence bibliographique.) contient une référence bibliographique faiblement structurée dans laquelle les sous-composants peuvent ou non être explicitement balisés. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 16.3.2. Declarable Elements]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="tei_model.gLike"/>
-               <ref name="tei_model.highlighted"/>
-               <ref name="tei_model.pPart.data"/>
-               <ref name="tei_model.pPart.edit"/>
-               <ref name="tei_model.segLike"/>
-               <ref name="tei_model.ptrLike"/>
-               <ref name="tei_model.biblPart"/>
-               <ref name="tei_model.global"/>
-            </choice>
-         </zeroOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bloc bibliographique d’attestation.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;bibl&gt;</code> sert ici à porter la localisation de l’attestation. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 16.3.2. Declarable Elements]</a:documentation>
+         <ref name="tei_biblScope"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.canonical.attributes"/>
          <ref name="tei_att.cmc.attributes"/>
@@ -6257,7 +6241,7 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</a:documentation
    </define>
    <define name="tei_teiHeader">
       <element name="teiHeader">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(en-tête TEI) fournit des informations descriptives et déclaratives qui constituent une page de titre électronique au début de tout texte conforme à la TEI. [2.1.1. The TEI Header and Its Components 16.1. Varieties of Composite Text]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(en-tête TEI) En-tête documentaire du glossaire TEI. [2.1.1. The TEI Header and Its Components 16.1. Varieties of Composite Text]</a:documentation>
          <group>
             <ref name="tei_fileDesc"/>
             <zeroOrMore>
@@ -7691,8 +7675,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
    </define>
    <define name="tei_TEI">
       <element name="TEI">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(document TEI) contient un seul document conforme à la TEI, qui comprend un en-tête TEI et un texte, soit de façon isolée, soit comme partie d’un élément <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;teiCorpus&gt;</code>. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(document TEI) Document TEI racine du glossaire. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
          <group>
             <ref name="tei_teiHeader"/>
             <choice>
@@ -7927,7 +7910,8 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
    </define>
    <define name="tei_div">
       <element name="div">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(division du texte) contient une subdivision dans le texte préliminaire, dans le corps d’un texte ou dans le texte postliminaire. [4.1. Divisions of the Body]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Division textuelle contenant le glossaire.) Dans ce projet, l’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;div&gt;</code> sert à porter le glossaire dans le corps du document. [4.1. Divisions of the Body]</a:documentation>
          <group>
             <zeroOrMore>
                <choice>
@@ -8003,8 +7987,15 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <ref name="tei_att.declaring.attributes"/>
          <ref name="tei_att.divLike.attributes"/>
          <ref name="tei_att.placement.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
          <ref name="tei_att.written.attributes"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Type de division.) Pour le glossaire TEI généré, la valeur retenue est glossaire.</a:documentation>
+            <choice>
+               <value>glossaire</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Division contenant les entrées du glossaire.</a:documentation>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -8944,211 +8935,6 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
          <ref name="tei_iType"/>
       </choice>
    </define>
-   <define name="tei_model.morphLike_alternation">
-      <choice>
-         <ref name="tei_gram"/>
-         <ref name="tei_gen"/>
-         <ref name="tei_number"/>
-         <ref name="tei_case"/>
-         <ref name="tei_per"/>
-         <ref name="tei_tns"/>
-         <ref name="tei_mood"/>
-         <ref name="tei_iType"/>
-      </choice>
-   </define>
-   <define name="tei_model.morphLike_sequence">
-      <ref name="tei_gram"/>
-      <ref name="tei_gen"/>
-      <ref name="tei_number"/>
-      <ref name="tei_case"/>
-      <ref name="tei_per"/>
-      <ref name="tei_tns"/>
-      <ref name="tei_mood"/>
-      <ref name="tei_iType"/>
-   </define>
-   <define name="tei_model.morphLike_sequenceOptional">
-      <optional>
-         <ref name="tei_gram"/>
-      </optional>
-      <optional>
-         <ref name="tei_gen"/>
-      </optional>
-      <optional>
-         <ref name="tei_number"/>
-      </optional>
-      <optional>
-         <ref name="tei_case"/>
-      </optional>
-      <optional>
-         <ref name="tei_per"/>
-      </optional>
-      <optional>
-         <ref name="tei_tns"/>
-      </optional>
-      <optional>
-         <ref name="tei_mood"/>
-      </optional>
-      <optional>
-         <ref name="tei_iType"/>
-      </optional>
-   </define>
-   <define name="tei_model.morphLike_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="tei_gram"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_gen"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_number"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_case"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_per"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_tns"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_mood"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_iType"/>
-      </zeroOrMore>
-   </define>
-   <define name="tei_model.morphLike_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="tei_gram"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_gen"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_number"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_case"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_per"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_tns"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_mood"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_iType"/>
-      </oneOrMore>
-   </define>
-   <define name="tei_model.lexicalRefinement">
-      <choice>
-         <ref name="tei_gramGrp"/>
-         <ref name="tei_pos"/>
-         <ref name="tei_subc"/>
-         <ref name="tei_colloc"/>
-         <ref name="tei_usg"/>
-         <ref name="tei_lbl"/>
-      </choice>
-   </define>
-   <define name="tei_model.lexicalRefinement_alternation">
-      <choice>
-         <ref name="tei_gramGrp"/>
-         <ref name="tei_pos"/>
-         <ref name="tei_subc"/>
-         <ref name="tei_colloc"/>
-         <ref name="tei_usg"/>
-         <ref name="tei_lbl"/>
-      </choice>
-   </define>
-   <define name="tei_model.lexicalRefinement_sequence">
-      <ref name="tei_gramGrp"/>
-      <ref name="tei_pos"/>
-      <ref name="tei_subc"/>
-      <ref name="tei_colloc"/>
-      <ref name="tei_usg"/>
-      <ref name="tei_lbl"/>
-   </define>
-   <define name="tei_model.lexicalRefinement_sequenceOptional">
-      <optional>
-         <ref name="tei_gramGrp"/>
-      </optional>
-      <optional>
-         <ref name="tei_pos"/>
-      </optional>
-      <optional>
-         <ref name="tei_subc"/>
-      </optional>
-      <optional>
-         <ref name="tei_colloc"/>
-      </optional>
-      <optional>
-         <ref name="tei_usg"/>
-      </optional>
-      <optional>
-         <ref name="tei_lbl"/>
-      </optional>
-   </define>
-   <define name="tei_model.lexicalRefinement_sequenceOptionalRepeatable">
-      <zeroOrMore>
-         <ref name="tei_gramGrp"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_pos"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_subc"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_colloc"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_usg"/>
-      </zeroOrMore>
-      <zeroOrMore>
-         <ref name="tei_lbl"/>
-      </zeroOrMore>
-   </define>
-   <define name="tei_model.lexicalRefinement_sequenceRepeatable">
-      <oneOrMore>
-         <ref name="tei_gramGrp"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_pos"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_subc"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_colloc"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_usg"/>
-      </oneOrMore>
-      <oneOrMore>
-         <ref name="tei_lbl"/>
-      </oneOrMore>
-   </define>
-   <define name="tei_model.gramPart">
-      <choice>
-         <ref name="tei_model.morphLike"/>
-         <ref name="tei_model.lexicalRefinement"/>
-      </choice>
-   </define>
-   <define name="tei_model.formPart">
-      <choice>
-         <ref name="tei_model.gramPart"/>
-         <ref name="tei_form"/>
-         <ref name="tei_orth"/>
-         <ref name="tei_pron"/>
-         <ref name="tei_hyph"/>
-         <ref name="tei_syll"/>
-         <ref name="tei_stress"/>
-      </choice>
-   </define>
    <define name="tei_model.ptrLike.form">
       <choice>
          <ref name="tei_oRef"/>
@@ -9211,16 +8997,16 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
    </define>
    <define name="tei_entry">
       <element name="entry">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(entrée) contient une entrée structurée de dictionnaire. [10.1. Dictionary Body and Overall Structure 10.2. The Structure of Dictionary Entries]</a:documentation>
-         <oneOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Entrée lexicale du glossaire TEI.) Chaque entrée contient au moins une ou plusieurs formes, puis soit un sens défini, soit un renvoi interne pour les cas de synonymie. [10.1. Dictionary Body and Overall Structure 10.2. The Structure of Dictionary Entries]</a:documentation>
+         <group>
+            <oneOrMore>
+               <ref name="tei_form"/>
+            </oneOrMore>
             <choice>
-               <ref name="tei_hom"/>
                <ref name="tei_sense"/>
-               <ref name="tei_model.entryPart.top"/>
-               <ref name="tei_model.global"/>
-               <ref name="tei_model.ptrLike"/>
+               <ref name="tei_xr"/>
             </choice>
-         </oneOrMore>
+         </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.entryLike.attributes"/>
          <ref name="tei_att.sortable.attributes"/>
@@ -9266,17 +9052,11 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
    </define>
    <define name="tei_sense">
       <element name="sense">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">regroupe toutes les informations relatives à un des sens d’un mot dans une entrée de dictionnaire (définitions, exemples, équivalents linguistiques, etc.). [10.2. The Structure of Dictionary Entries]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="tei_model.gLike"/>
-               <ref name="tei_sense"/>
-               <ref name="tei_model.entryPart.top"/>
-               <ref name="tei_model.phrase"/>
-               <ref name="tei_model.global"/>
-            </choice>
-         </zeroOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bloc sémantique de l’entrée.) Dans ce projet, <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;sense&gt;</code> sert à contenir une définition ou traduction succincte du terme. [10.2. The Structure of Dictionary Entries]</a:documentation>
+         <oneOrMore>
+            <ref name="tei_def"/>
+         </oneOrMore>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.lexicographic.attributes"/>
          <optional>
@@ -9308,42 +9088,30 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
    </define>
    <define name="tei_form">
       <element name="form">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(groupe d'informations sur une forme dans une entrée) regroupe toutes les informations relatives à la morphologie et à la prononciation d'une entrée. [10.3.1. Information on Written and Spoken Forms]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="tei_model.gLike"/>
-               <ref name="tei_model.phrase"/>
-               <ref name="tei_model.inter"/>
-               <ref name="tei_model.formPart"/>
-               <ref name="tei_model.global"/>
-            </choice>
-         </zeroOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Forme rattachée à une entrée.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;form&gt;</code> sert à encoder les formes du glossaire, qu’il s’agisse du lemme, d’une variante ou d’une flexion. [10.3.1. Information on Written and Spoken Forms]</a:documentation>
+         <group>
+            <oneOrMore>
+               <ref name="tei_orth"/>
+            </oneOrMore>
+            <ref name="tei_gramGrp"/>
+            <zeroOrMore>
+               <ref name="tei_cit"/>
+            </zeroOrMore>
+         </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">qualifie la forme comme simple, composée, etc.
-Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] derivative; 6] inflected; 7] phrase</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Type de forme.) Les valeurs retenues suivent la logique du fichier source et restent en français.</a:documentation>
                <choice>
-                  <value>simple</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">item lexical simple</a:documentation>
-                  <value>lemma</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">l'entrée proprement dite</a:documentation>
-                  <value>variant</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">variante</a:documentation>
-                  <value>compound</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">mot formé d'items lexicaux simples</a:documentation>
-                  <value>derivative</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">mot dérivé de l'entrée</a:documentation>
-                  <value>inflected</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">mot dans une autre forme que la forme habituelle du dictionnaire</a:documentation>
-                  <value>phrase</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">item lexical à plusieurs mots</a:documentation>
-                  <data type="token">
-                     <param name="pattern">[^\p{C}\p{Z}]+</param>
-                  </data>
+                  <value>lemme</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Forme vedette du terme.</a:documentation>
+                  <value>variante</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Variante graphique ou lexicale.</a:documentation>
+                  <value>flexion</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Forme fléchie attestée.</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -9352,7 +9120,9 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
    </define>
    <define name="tei_orth">
       <element name="orth">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(forme orthographique) donne l’orthographe d'un mot-vedette de dictionnaire. [10.3.1. Information on Written and Spoken Forms]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Graphie d’une forme.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;orth&gt;</code> contient la graphie d’une forme et porte un attribut <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@xml:lang</code>. [10.3.1. Information on Written and Spoken Forms]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.lexicographic.attributes"/>
@@ -9402,33 +9172,22 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <empty/>
       </element>
    </define>
-   <define name="tei_stress">
-      <element name="stress">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(accentuation) contient le modèle d’accentuation d'une entrée de dictionnaire, s’il est donné à part. [10.3.1. Information on Written and Spoken Forms]</a:documentation>
-         <ref name="tei_macro.paraContent"/>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.notated.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="tei_gram">
       <element name="gram">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(information grammaticale) contient de l'information grammaticale relative à un terme, un mot ou une forme dans une entrée de dictionnaire ou dans un fichier de données terminologiques. [10.3.2. Grammatical Information]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Trait grammatical typé.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;gram&gt;</code> sert à encoder les traits grammaticaux secondaires à l’aide d’un attribut <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@type</code>. [10.3.2. Grammatical Information]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <optional>
-            <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classe l'information grammaticale fournie selon une typologie particulière : dans le cas d'informations terminologiques, de préférence au moyen du dictionnaire des types d'éléments de données spécifiés dans la norme <a xmlns="http://www.w3.org/1999/xhtml"
-                     xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                     href="http://www.isocat.org/">ISO 12620</a>.
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Type de trait grammatical.) Liste actuelle des types produits par la feuille XSLT.
 Sample values include: 1] pos (part of speech); 2] gen (gender); 3] num (number); 4] animate; 5] proper</a:documentation>
-               <data type="token">
-                  <param name="pattern">[^\p{C}\p{Z}]+</param>
-               </data>
-            </attribute>
-         </optional>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -9507,22 +9266,14 @@ Sample values include: 1] abbrev; 2] verbTable</a:documentation>
    </define>
    <define name="tei_gramGrp">
       <element name="gramGrp">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(groupe d'informations grammaticales) regroupe des informations morphosyntaxiques sur un item lexical, par exemple Partie du discours <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;pos&gt;</code>, Genre <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;gen&gt;</code>, Nombre <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;number&gt;</code>, Cas <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;case&gt;</code>, ou Classe flexionnelle <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;iType&gt;</code>. [10.3.2. Grammatical Information]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="tei_model.gLike"/>
-               <ref name="tei_model.phrase"/>
-               <ref name="tei_model.inter"/>
-               <ref name="tei_model.gramPart"/>
-               <ref name="tei_model.global"/>
-            </choice>
-         </zeroOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bloc d’informations grammaticales.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;gramGrp&gt;</code> regroupe la catégorie grammaticale principale et les traits grammaticaux associés. [10.3.2. Grammatical Information]</a:documentation>
+         <group>
+            <ref name="tei_pos"/>
+            <zeroOrMore>
+               <ref name="tei_gram"/>
+            </zeroOrMore>
+         </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -9531,7 +9282,8 @@ Sample values include: 1] abbrev; 2] verbTable</a:documentation>
    </define>
    <define name="tei_pos">
       <element name="pos">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(partie du discours) indique la partie du discours attribuée à une entrée de dictionnaire telle que nom, verbe, adjectif. [10.3.2. Grammatical Information]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Catégorie grammaticale principale.) Dans le glossaire TEI généré, la valeur de <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;pos&gt;</code> reste en français. [10.3.2. Grammatical Information]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.lexicographic.attributes"/>
@@ -9559,7 +9311,8 @@ Sample values include: 1] abbrev; 2] verbTable</a:documentation>
    </define>
    <define name="tei_def">
       <element name="def">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(définition) contient le texte de la définition dans une entrée de dictionnaire. [10.3.3.1. Definitions]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Définition ou traduction.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;def&gt;</code> reçoit le contenu textuel de la définition source et porte la langue principale du glossaire. [10.3.3.1. Definitions]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.lexicographic.attributes"/>
@@ -9638,30 +9391,19 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
    </define>
    <define name="tei_xr">
       <element name="xr">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(renvoi) contient une expression, une phrase ou une icône qui invite le lecteur à se référer à un autre endroit, dans le même texte ou dans un autre texte. [10.3.5.3. Cross-References to Other Entries]</a:documentation>
-         <zeroOrMore>
-            <choice>
-               <text/>
-               <ref name="tei_model.gLike"/>
-               <ref name="tei_model.phrase"/>
-               <ref name="tei_model.inter"/>
-               <ref name="tei_usg"/>
-               <ref name="tei_lbl"/>
-               <ref name="tei_model.global"/>
-            </choice>
-         </zeroOrMore>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Renvoi lexical interne.) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;xr&gt;</code> sert à encoder les renvois entre entrées du glossaire dans les cas de synonymie. [10.3.5.3. Cross-References to Other Entries]</a:documentation>
+         <ref name="tei_ref"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <optional>
-            <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indique le type de renvoi, en utilisant n'importe quelle typologie adaptée.
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Type de renvoi.) La valeur actuellement produite est synonyme.
 Sample values include: 1] syn (synonym); 2] etym (etymological); 3] cf (compare or consult); 4] illus (illustration)</a:documentation>
-               <data type="token">
-                  <param name="pattern">[^\p{C}\p{Z}]+</param>
-               </data>
-            </attribute>
-         </optional>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
+         </attribute>
          <empty/>
       </element>
    </define>
