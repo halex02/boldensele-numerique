@@ -213,7 +213,7 @@
             </desc>
             <attList>
               <attDef ident="type"
-                mode="change"
+                mode="replace"
                 usage="req">
                 <gloss>Type de trait grammatical.</gloss>
                 <desc>Liste actuelle des types produits par la feuille XSLT.</desc>

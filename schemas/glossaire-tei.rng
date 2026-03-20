@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-03-20T19:46:48Z. . 
+Schema generated from ODD source 2026-03-20T19:58:09Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
  Personnalisation TEI pour un glossaire autonome, en lien avec une édition critique numérique, produit automatiquement depuis un schéma XML de travail. 
@@ -138,7 +138,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4477089e74208-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4484335e74066-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -208,7 +208,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4477089e75889-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4484335e75747-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -9182,11 +9182,27 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
          <ref name="tei_att.lexicographic.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
          <attribute name="type">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Type de trait grammatical.) Liste actuelle des types produits par la feuille XSLT.
-Sample values include: 1] pos (part of speech); 2] gen (gender); 3] num (number); 4] animate; 5] proper</a:documentation>
-            <data type="token">
-               <param name="pattern">[^\p{C}\p{Z}]+</param>
-            </data>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Type de trait grammatical.) Liste actuelle des types produits par la feuille XSLT.</a:documentation>
+            <choice>
+               <value>genre</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Genre grammatical.</a:documentation>
+               <value>nombre</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Nombre grammatical.</a:documentation>
+               <value>cas</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Cas grammatical.</a:documentation>
+               <value>degre</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Degré de l’adjectif ou de l’adverbe.</a:documentation>
+               <value>construction</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Construction grammaticale.</a:documentation>
+               <value>mode</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Mode verbal.</a:documentation>
+               <value>temps</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Temps verbal.</a:documentation>
+               <value>voix</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Voix verbale.</a:documentation>
+               <value>personne</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Personne verbale.</a:documentation>
+            </choice>
          </attribute>
          <empty/>
       </element>
