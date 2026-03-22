@@ -42,6 +42,7 @@
           <sense>
             <def xml:lang="fr">mer</def>
           </sense>
+          <note type="occurrences" n="2">2</note>
         </entry>
         <entry xml:id="gls-0002">
           <form type="lemme">
@@ -55,6 +56,7 @@
           <xr type="synonyme">
             <ref target="#gls-0001"/>
           </xr>
+          <note type="occurrences" n="0">0</note>
         </entry>
       </div>
     </body>
