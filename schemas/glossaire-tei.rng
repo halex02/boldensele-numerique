@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-03-20T19:58:09Z. . 
+Schema generated from ODD source 2026-03-22T14:31:20Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
  Personnalisation TEI pour un glossaire autonome, en lien avec une édition critique numérique, produit automatiquement depuis un schéma XML de travail. 
@@ -138,7 +138,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4484335e74066-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4723987e73931-constraint">
          <rule context="tei:content">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/compatibility/annotations/1.0', 'http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">content descendants must be in the
               namespaces
@@ -208,7 +208,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/
             </choice>
          </zeroOrMore>
       </element>
-      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4484335e75747-constraint">
+      <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="d4723987e75612-constraint">
          <rule context="tei:datatype">
             <report test="descendant::*[not(namespace-uri(.) =               ('http://relaxng.org/ns/structure/1.0', 'http://www.tei-c.org/ns/1.0'))]">datatype descendants must be in the
               namespaces
@@ -5341,7 +5341,9 @@ Suggested values include: 1] gloss (gloss); 2] index (index); 3] instructions (i
    </define>
    <define name="tei_note">
       <element name="note">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note) contient une note ou une annotation. [3.9.1. Notes and Simple Annotation 2.2.6. The Notes Statement 3.12.2.8. Notes and Statement of Language 10.3.5.4. Notes within Entries]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Élément d’annotation) L’élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;note&gt;</code> peut être utilisé pour porter des annotations diverses, qui peuvent être de tout type. Dans cette personnalisation, on l’emploie notamment pour encoder le nombre d’occurrences d’un terme dans un élément <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;entry&gt;</code>. [3.9.1. Notes and Simple Annotation 2.2.6. The Notes Statement 3.12.2.8. Notes and Statement of Language 10.3.5.4. Notes within Entries]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.anchoring.attributes"/>
@@ -9006,6 +9008,7 @@ Suggested values include: 1] main; 2] hom (homograph); 3] xref (cross reference)
                <ref name="tei_sense"/>
                <ref name="tei_xr"/>
             </choice>
+            <ref name="tei_note"/>
          </group>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.entryLike.attributes"/>

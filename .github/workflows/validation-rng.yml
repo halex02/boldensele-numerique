@@ -1,4 +1,4 @@
-name: Validation RNG
+name: Validation du schémaRNG
 
 on:
   push:
@@ -103,12 +103,12 @@ jobs:
           if: success()
           run: |
             curl -H "Content-Type: application/json" \
-              -d '{"content":"✅ Validation RNG : success — ${{ github.repository }} — branche ${{ github.ref_name }}$"}' \
+              -d '{"content":"✅ Validation RNG : SUCCES — ${{ github.repository }} — branche ${{ github.ref_name }}"}' \
               "${{ secrets.DISCORD_WEBHOOK_URL }}" 
         
         - name: Notification Discord échec
           if: failure()
           run: |
             curl -H "Content-Type: application/json" \
-              -d '{"content":"❌ Validation RNG : failure — ${{ github.repository }} — branche ${{ github.ref_name }}$"}' \
+              -d '{"content":"❌ Validation RNG : ECHEC — ${{ github.repository }} — branche ${{ github.ref_name }}"}' \
               "${{ secrets.DISCORD_WEBHOOK_URL }}"

@@ -1,11 +1,10 @@
 from saxonche import *
 
 with PySaxonProcessor(license=False) as proc:
-    fichier = open("latex\\memoire.tex", "w", encoding="utf-8")
     xsltproc = proc.new_xslt30_processor()
-    executable = xsltproc.compile_stylesheet(stylesheet_file="xslt\\transform.xsl")
-    document = proc.parse_xml(xml_file_name='guillaume-de-boldensele.xml')
+    executable = xsltproc.compile_stylesheet(stylesheet_file="../xslt/odt-vers-glossaireXML.xsl")
+    document = proc.parse_xml(xml_file_name='../work/transcription_boldensele.fodt')
     output = executable.transform_to_string(xdm_node=document)
-    print(output)
-    fichier.write(output)
-    fichier.close()
+    
+    with open("../data/glossaire.xml", "w", encoding="utf-8") as f:
+        f.write(output)

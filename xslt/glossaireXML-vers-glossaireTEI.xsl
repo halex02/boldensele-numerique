@@ -64,6 +64,13 @@
         </entry>
     </xsl:template>
 
+    <xsl:template match="gls:nombre-occurrences">
+        <xsl:variable name="valeur-occurrences" select="normalize-space(.)" />
+        <note type="occurrences" n="{$valeur-occurrences}">
+            <xsl:value-of select="$valeur-occurrences" />
+        </note>
+        </xsl:template>
+
     <xsl:template match="gls:definition">
         <sense>
             <def xml:lang="{$lang-glossaire}">

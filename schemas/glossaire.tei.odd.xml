@@ -29,6 +29,7 @@
     <revisionDesc>
       <change when="2026-03-20">Génération d’une structure initiale pour un ODD décrivant la structure du glossaire TEI via le modèle d’IA GPT-5.3 
       à partir du modèle conceptuel prévu pour la transformation XSLT depuis le schéma XML de travail vers le format TEI. Éléments de documentation enrichis manuellement ensuite.</change>
+      <change when="2026-03-22">Ajout manuel d’un élément <gi>note</gi> pour porter le nombre d’occurrences d’un terme dans une entrée du glossaire.</change>
     </revisionDesc>
   </teiHeader>
 
@@ -105,12 +106,13 @@
                   <rng:ref name="sense" />
                   <rng:ref name="xr" />
                 </rng:choice>
+                <rng:ref name="note" />
               </rng:group>
             </content>
             <remarks>
               <p>L’ordre retenu est le suivant :
                 une ou plusieurs formes (<gi>form</gi>), suivies soit d’un bloc sémantique (<gi>sense</gi>),
-                soit d’un renvoi (<gi>xr</gi>)</p>
+                soit d’un renvoi (<gi>xr</gi>), et enfin d’une note (<gi>note</gi>) comptabilisant le nombre d’occurrences</p>
             </remarks>
             <exemplum>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -125,6 +127,33 @@
               </egXML>
             </exemplum>
           </elementSpec>
+
+          <elementSpec ident="note"
+            mode="change"
+            module="core">
+            <gloss>Élément d’annotation</gloss>
+            <desc>L’élément <gi>note</gi> peut être utilisé pour porter des annotations diverses, qui peuvent être de tout type.
+            Dans cette personnalisation, on l’emploie notamment pour encoder le nombre d’occurrences d’un terme dans un élément <gi>entry</gi>.</desc>
+            <exemplum>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <entry xml:id="gls-0001">
+                  <form type="lemme">
+                    <orth xml:lang="la">mare</orth>
+                  </form>
+                  <sense>
+                    <def xml:lang="fr">mer</def>
+                  </sense>
+                  <note type="occurrences" n="12">
+                    12
+                  </note>
+                </entry>
+              </egXML>
+            </exemplum>
+            <remarks>
+              <p> Si on intègre note pour l’encodage du nombre d’occurrences, on lui conserve son comportement générique pour pouvoir l’utiliser pour d’autres types d’annotations, en cas d’extension des fonctions de la structure TEI du glossaire</p>
+            </remarks>        
+              </elementSpec>
+            
 
           <elementSpec ident="form"
             mode="change"
