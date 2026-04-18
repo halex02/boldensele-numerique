@@ -42,10 +42,12 @@
 	</head>
 	
 	<body typeof="schema:WebPage" resource="https://halex02.github.io/boldensele-numerique/">
+		<nav class="skip-links menu" aria-label="Liens d’évitement">
 		<!-- Lien d’évitement (accessibilité clavier) -->
-		<a href="#main_menu" class="skip-link" title="Aller au menu principal">Menu</a>
+		<a href="#main_menu" class="skip-link" title="Aller au menu principal">Menu principal</a>
 		<a href="#main" class="skip-link" title="Aller au contenu">Contenu</a>
-		
+		<a href="#footer" class="skip-link" title="Aller au pied de page">Pied-de-page</a>
+		</nav>
 		<header>
 			<div>
 				<h1 property="schema:name dcterms:title"> Édition numérique du <span xml:lang="la" lang="la">Liber de
@@ -54,7 +56,7 @@
 				<p property="schema:description dcterms:description"> Projet d’édition critique numérique du
 					récit de voyage de Guillaume de Boldensele. </p>
 			</div>
-			<nav id="main_menu" aria-label="Menu principal" class="menu">
+			<nav id="main_menu" tabindex="-1" aria-label="Menu principal" class="menu">
 				<div>
 					<a href="index.html" aria-current="page">Accueil</a>
 					<a href="edition.html">Édition</a>
@@ -63,7 +65,7 @@
 				</div>
 			</nav>
 		</header>
-		<main id="main" property="schema:mainContentOfPage">
+		<main id="main" tabindex="-1" property="schema:mainContentOfPage">
 			
 			<!-- 1. Présentation -->
 			<section aria-labelledby="presentation">
@@ -139,7 +141,7 @@
 			</section>
 			
 		</main>
-		<footer>
+		<footer tabindex="-1" id="footer">
   <section class="licence" id="bloc-licence" aria-labelledby="licence">
 		<h2 id="licence">Licence</h2>
     <p>
