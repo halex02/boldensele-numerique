@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xml:lang="fr" lang="fr" prefix="
+        schema: https://schema.org/
+        dcterms: http://purl.org/dc/terms/
+      ">
+<head>
+  <meta charset="utf-8">
+  <title>Erreur 404 : Page non trouvée</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Page d’erreur 404 du site de l’édition numérique du Liber de quibusdam ultramarinis partibus.">
+  <meta name="author" content="Alexandre Moret">
+  <link rel="canonical" href="https://halex02.github.io/boldensele-numerique/404.html">
+  <link rel="home" href="https://halex02.github.io/boldensele-numerique/">
+</head>
+<body typeof="schema:WebPage">
+  <nav class="skip-links menu" aria-label="Liens d’évitement">
+    <!-- Lien d’évitement (accessibilité clavier) -->
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
+    <a href="#lien-accueil" class="skip-link">Aller au menu principal</a>
+  </nav>
+
+  <header>
+    <div>
+      <h1 property="schema:name dcterms:title"> Édition numérique du <span xml:lang="la" lang="la">Liber de quibusdam ultramarinis partibus</span></h1>
+      <p property="schema:description dcterms:description"> Projet d’édition critique numérique du récit de voyage de Guillaume de Boldensele. </p>
+    </div>
+    <nav id="main-menu" aria-label="Menu principal" class="menu">
+      <div>
+	<a id="lien-accueil" href="/boldensele-numerique/" rel="home">Accueil</a>
+	<a href="/boldensele-numerique/edition.html" >Édition</a>
+	<a href="/boldensele-numerique/glossaire.html" >Glossaire</a>
+	<a href="/boldensele-numerique/a-propos.html" >À propos</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main id="main" tabindex="-1" property="schema:mainContentOfPage">
+    <section>
+      <h2>Erreur 404</h2>
+      <p aria-live="polite">La page que vous avez demandée est introuvable : <samp id="url-demandee" aria-label="URL demandée"></samp><!--penser à ajouter une règle css pour wrap le contenu de samp "word-break=break-all;" -->.</p>
+      <!-- @aria-live="polite" informe l’utilisateur de technologie d’assistance de la MAJ d’un contenu interactif sans interrompre les actions en cours -->
+      <script type="text/javascript">
+	document.getElementById("url-demandee").textContent = window.location.pathname;
+      </script>
+      <p>
+	<a href="/boldensele-numerique/" rel="home">Retour à l’accueil</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    
+  </footer>
+</body>
+</html>
