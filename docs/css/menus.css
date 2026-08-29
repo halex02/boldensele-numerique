@@ -1,0 +1,24 @@
+nav, ul.menu{
+	font-size: 1rem; /* utilisation d’unités relatives pour la taille de texte*/
+}
+
+ul.menu {
+    list-style-type: none; /* suppression des puces des listes */
+}
+
+nav[aria-label="Menu principal"]{
+	font-size: 1.1rem; /* utilisation d’unités relatives pour la taille de texte*/
+	/* légère augmentation de la taille de police pour le menu principal, afin de le faire ressortir par rapport aux autres constituants de la page.
+		Ce n’est pas utile pour l’accessibilité, mais je trouve que ça attire le regard sur les éléments de navigation*/
+}
+
+a[role="menuitem"]{
+	/* utilisation d’unités relatives pour les dimensions du bloc, et pour les marges intérieures (padding) */
+	width: 100%;
+	height: 100%;
+	padding: 0.75em 1.5em;
+}
+
+a[role="menuitem"]:is(:hover, :focus, :active){
+	font-weight: bolder; /* mise en valeur des liens survolés/cliqués/actifs par un élément typographique, indépendant de la couleur. */
+}
