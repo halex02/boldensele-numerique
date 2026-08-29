@@ -144,10 +144,6 @@ footer nav a + a {
      margin-left: 1rem;
 }
 
-[lang="la"] {
-     font-style: italic;
-}
-
 @media (max-width: 45rem) {
      body {
           padding: 0.25rem;
