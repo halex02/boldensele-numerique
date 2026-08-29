@@ -1,18 +1,137 @@
+* {
+     box-sizing: border-box;
+}
+
 body {
-     font-family: "Liberation Sans", "Calibri", sans-serif ;
-     font-size: 1rem; /* utilisation d’unités relatives pour la taille de texte*/
-     line-height: 1.5; /* */
-     text-align:left; /* */
+     margin: 0;
+     padding: 0.5rem;
+     font-family: "Liberation Sans", "Calibri", sans-serif;
+     font-size: 1rem;
+     line-height: 1.5;
+     text-align: left;
 }
 
-main, aside, nav, header, footer {
-     border-style: groove;
+header,
+main,
+footer,
+nav {
+     border-style: solid;
+     border-width: 1px;
      border-radius: 3px;
-     margin: 1px;
 }
 
-[lang="lat"]{
-  font
+header,
+main,
+footer {
+     padding: 1rem;
+     margin-bottom: 0.5rem;
 }
 
+body > main#main {
+     width: 100%;
+     max-width: none;
+}
 
+header > div,
+main,
+footer {
+     max-width: 90rem;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+header h1 {
+     margin-top: 0;
+     margin-bottom: 0.25rem;
+}
+
+header p {
+     margin-top: 0;
+}
+
+main section + section {
+     margin-top: 2rem;
+}
+
+main h2 {
+     margin-bottom: 0.5rem;
+}
+
+#main_menu {
+     margin-top: 1rem;
+     padding: 0.25rem;
+}
+
+#main_menu > div {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-around;
+     gap: 0.25rem;
+}
+
+#main_menu a {
+     display: block;
+     padding: 0.75em 1.5em;
+     color: #020F23;
+}
+
+#main_menu a:is(:hover, :focus, :active),
+#main_menu a[aria-current="page"] {
+     background-color: #FFEDCE;
+     color: #152F56;
+     font-weight: bolder;
+}
+
+.skip-links {
+     position: absolute;
+     left: -10000px;
+     top: auto;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+}
+
+.skip-links:focus-within {
+     position: static;
+     width: auto;
+     height: auto;
+     overflow: visible;
+     padding: 0.5rem;
+     margin-bottom: 0.5rem;
+}
+
+.skip-links a {
+     margin-right: 1rem;
+}
+
+footer nav {
+     padding: 0.5rem;
+}
+
+footer nav a + a {
+     margin-left: 1rem;
+}
+
+[lang="la"] {
+     font-style: italic;
+}
+
+@media (max-width: 45rem) {
+     body {
+          padding: 0.25rem;
+     }
+
+     header,
+     main,
+     footer {
+          padding: 0.75rem;
+     }
+
+     #main_menu > div {
+          flex-direction: column;
+     }
+
+     #main_menu a {
+          width: 100%;
+     }
+}
