@@ -46,27 +46,6 @@
 
     <xsl:template match="div" mode="page">
 
-        <!--
-            À terme, @xml:id doit fournir directement le nom
-            canonique de la page.
-
-            Le fallback permet néanmoins de travailler avec
-            l'état actuel de la TEI, où le prologue n'a pas
-            encore nécessairement de @xml:id.
-        -->
-        <xsl:variable name="identifiant-page"
-            as="xs:string"
-            select="
-                if (@xml:id)
-                then string(@xml:id)
-                else if (@type = 'prologue')
-                then 'prologue'
-                else concat(
-                    'division-',
-                    count(preceding-sibling::div) + 1
-                )
-            "/>
-
         <!-- Titre court destiné à l'interface -->
         <xsl:variable name="titre-page"
             as="xs:string"
@@ -79,7 +58,7 @@
             "/>
 
         <xsl:result-document
-            href="{$dossier-sortie}{$identifiant-page}.html">
+            href="{$dossier-sortie}prologue.html">
 
             <html lang="fr">
 
@@ -153,11 +132,10 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/boldensele-numerique/edition/prologue.html">
-                                            <xsl:if test="$identifiant-page = 'prologue'">
-                                                <xsl:attribute name="aria-current" select="'page'"/>
-                                            </xsl:if>
-                                            <xsl:text>Prologue</xsl:text>
+                                        <a
+                                            href="/boldensele-numerique/edition/prologue.html"
+                                            aria-current="page">
+                                            Prologue
                                         </a>
                                     </li>
                                 </ul>
@@ -176,7 +154,6 @@
                     <main id="main" tabindex="-1">
                         <article
                             class="edition"
-                            id="{$identifiant-page}"
                             lang="la">
 
                             <header class="edition-header">
@@ -233,9 +210,9 @@
 
     <!-- Développement d'abréviation -->
     <xsl:template match="ex">
-        <span class="expansion">
+        <em class="expansion">
             <xsl:apply-templates/>
-        </span>
+        </em>
     </xsl:template>
 
     <!-- Rubrication -->
@@ -250,15 +227,6 @@
         <span class="pb" id="folio-{@n}">
             <xsl:text>[fol. </xsl:text>
             <xsl:value-of select="@n"/>
-            <xsl:text>]</xsl:text>
-        </span>
-    </xsl:template>
-
-    <!-- Note de source -->
-    <xsl:template match="note[@type = 'source']">
-        <span class="note-source">
-            <xsl:text>[</xsl:text>
-            <xsl:apply-templates/>
             <xsl:text>]</xsl:text>
         </span>
     </xsl:template>
