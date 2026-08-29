@@ -50,7 +50,10 @@ main h2 {
 }
 
 #main_menu {
-     margin-top: 1rem;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     margin-bottom: 0.5rem;
      padding: 0.25rem;
 }
 
@@ -58,20 +61,60 @@ main h2 {
      display: flex;
      flex-flow: row wrap;
      justify-content: space-around;
+     align-items: stretch;
      gap: 0.25rem;
 }
 
-#main_menu a {
+#main_menu a,
+#main_menu summary {
      display: block;
      padding: 0.75em 1.5em;
      color: #020F23;
 }
 
 #main_menu a:is(:hover, :focus, :active),
-#main_menu a[aria-current="page"] {
+#main_menu summary:is(:hover, :focus),
+#main_menu a[aria-current="page"],
+#main_menu details[open] > summary {
      background-color: #FFEDCE;
      color: #152F56;
      font-weight: bolder;
+}
+
+#main_menu details {
+     position: relative;
+}
+
+#main_menu summary {
+     cursor: pointer;
+     list-style: none;
+}
+
+#main_menu summary::-webkit-details-marker {
+     display: none;
+}
+
+#main_menu summary::after {
+     content: " ▾";
+}
+
+#main_menu details[open] > summary::after {
+     content: " ▴";
+}
+
+#main_menu .submenu {
+     position: absolute;
+     left: 0;
+     top: 100%;
+     min-width: 13rem;
+     padding: 0.25rem;
+     background-color: #D9B26F;
+     border: 1px solid #817155;
+     border-radius: 3px;
+}
+
+#main_menu .submenu a {
+     white-space: nowrap;
 }
 
 .skip-links {
@@ -123,7 +166,16 @@ footer nav a + a {
           flex-direction: column;
      }
 
-     #main_menu a {
+     #main_menu a,
+     #main_menu summary {
           width: 100%;
+     }
+
+     #main_menu .submenu {
+          position: static;
+          width: 100%;
+          border-left: 0;
+          border-right: 0;
+          border-bottom: 0;
      }
 }
