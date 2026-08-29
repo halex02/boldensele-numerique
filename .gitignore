@@ -1,6 +1,19 @@
-/facs/Wo/
+#Emacs
+*~
+\#*\#
+.\#*
+.emacs.desktop
+.emacs.desktop.lock
+
+#Facsimilés
+/facs/
+
+#Fichiers de compilation LateX
 *.aux
 *.log
-latex/memoire.synctex.gz
-*.1
-work/.~lock.transcription_boldensele.odt\#
+*.synctex.gz
+
+#LibreOffice lockfiles
+.~lock.*#
+
+Deluz.pdf
