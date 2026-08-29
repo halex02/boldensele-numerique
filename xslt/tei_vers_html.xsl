@@ -133,7 +133,7 @@
                                     </li>
                                     <li>
                                         <a
-                                            href="/boldensele-numerique/edition/prologue.html"
+                                            href="/boldensele-numerique/pages/prologue.html"
                                             aria-current="page">
                                             Prologue
                                         </a>
