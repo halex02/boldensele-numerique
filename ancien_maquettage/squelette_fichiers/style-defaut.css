@@ -1,0 +1,41 @@
+.conteneur {
+     display: flex;
+}
+
+body {
+     background-color: #FFE0AA;
+     flex-direction: column;
+}
+
+main, aside, nav, header, footer {
+     background-color: #D9B26F;
+     
+     border-style: dotted;
+     
+     margin: 1px;
+}
+
+#contenu-principal{
+     order: 2;
+}
+
+main{
+     width: 90%;
+     
+}
+
+aside{
+     width: 10%;
+}
+
+nav {
+     order: 1;
+}
+
+header {
+     order: 0;
+}
+
+footer {
+     order: 3; 
+}
