@@ -1,0 +1,19 @@
+
+body {
+	background-color: #FFE0AA;
+}
+
+main, aside, nav, header, footer {
+	background-color: #D9B26F;
+	border-color: #817155;
+}
+
+a[role="menuitem"]{
+	color: #020F23; /* le contraste avec la couleur de fond du nav valide WCAG2.1 AAA */
+}
+
+a[role="menuitem"]:is(:hover, :focus, :active){
+	/* Le contraste entre les deux couleur de cette règle CSS est valide WCAG2.1 AAA */
+	background-color: #FFEDCE;
+	color: #152F56;
+}
