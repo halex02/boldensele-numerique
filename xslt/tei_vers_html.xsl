@@ -18,7 +18,7 @@
     <!-- Dossier de sortie des pages de l'édition -->
     <xsl:param name="dossier-sortie"
         as="xs:string"
-        select="'../docs/edition/'"/>
+        select="'../docs/pages/'"/>
 
     <!-- =========================================================
          POINT D'ENTRÉE
