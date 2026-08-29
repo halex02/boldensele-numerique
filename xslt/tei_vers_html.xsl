@@ -80,7 +80,7 @@
 
                     <link
                         rel="stylesheet"
-                        href="/boldensele-numerique/css/screen-default.css"
+                        href="../css/screen-default.css"
                         media="screen"/>
                 </head>
 
