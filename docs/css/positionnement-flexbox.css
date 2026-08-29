@@ -1,0 +1,46 @@
+/***************************************
+  Positionnement des blocs via flex bloc
+***************************************/
+.flex-container {
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     justify-content: space-around;
+     gap: 2px;
+     align-items: stretch;
+     align-content:stretch;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrapper {
+ flex-wrap: wrap;
+ }
+header {
+    order: 0;
+}
+
+nav {
+    order: 1;
+}
+
+#main-content /* contient le corps de texte et les notes */{ 
+    order: 2;
+}
+
+footer {
+    order: 3;
+}
+
+.menu {
+	justify-content: space-around;
+	gap: 10px;
+}
