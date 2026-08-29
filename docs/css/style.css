@@ -1,0 +1,18 @@
+body {
+     font-family: "Liberation Sans", "Calibri", sans-serif ;
+     font-size: 1rem; /* utilisation d’unités relatives pour la taille de texte*/
+     line-height: 1.5; /* */
+     text-align:left; /* */
+}
+
+main, aside, nav, header, footer {
+     border-style: groove;
+     border-radius: 3px;
+     margin: 1px;
+}
+
+[lang="lat"]{
+  font
+}
+
+
