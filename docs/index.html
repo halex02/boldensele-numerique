@@ -59,57 +59,50 @@
 				<p property="schema:description dcterms:description"> Projet d’édition critique numérique du
 					récit de voyage de Guillaume de Boldensele. </p>
 			</div>
-			<nav id="main_menu" aria-label="Menu principal" class="menu">
-				<div>
-					<a id="lien-accueil" href="index.html" aria-current="page">Accueil</a>
-					<a href="edition.html">Édition</a>
-					<a href="glossaire.html">Glossaire</a>
-					<a href="a-propos.html">À propos</a>
-				</div>
-			</nav>
 		</header>
+		<nav id="main_menu" aria-label="Menu principal" class="menu">
+			<div>
+				<a id="lien-accueil" href="index.html" aria-current="page">Accueil</a>
+				<details>
+					<summary>Édition</summary>
+					<div class="submenu">
+						<a href="edition.html">Édition complète</a>
+						<a href="edition.html#prologue">Prologue</a>
+					</div>
+				</details>
+				<a href="glossaire.html">Glossaire</a>
+				<a href="a-propos.html">À propos</a>
+			</div>
+		</nav>
 		<main id="main" tabindex="-1" property="schema:mainContentOfPage">
-			
-			<!-- 1. Présentation -->
 			<section aria-labelledby="presentation">
 				<h2 id="presentation">Présentation</h2>
-				
 				<p>
 					Cette édition numérique propose une transcription et une analyse du
 					<span xml:lang="la" lang="la">Liber de quibusdam ultramarinis partibus</span>,
 					récit de voyage médiéval attribué à Guillaume de Boldensele.
 				</p>
 			</section>
-			
-			<!-- 2. Contexte scientifique -->
 			<section aria-labelledby="contexte">
 				<h2 id="contexte">Contexte scientifique</h2>
-				
 				<p>
 				  Ce projet est réalisé dans le cadre de mon mémoire pour le
 				  <span property="dcterms:educationLevel">Master 2 de Lettres modernes, parcours Édition Numérique et Imprimée de Textes Littéraires</span>
 				  à l’<a href="https://www.univ-lille.fr/">Université de Lille</a>.
 				</p>
-				
 				<p>
 				  Il est encadré par <span rel="schema:contributor" typeof="schema:Person" resource="https://www.idref.fr/056918658/id"><span property="schema:name"><a href="https://www.idref.fr/056918658/id">Marie-Madeleine Castellani</a></span><meta property="schema:roleName" content="Directrice de recherche"></span>, professeur émérite (langue et littérature françaises du Moyen-Âge), et <span rel="schema:contributor" typeof="schema:Person" resource="https://www.idref.fr/137280815/id"><span property="schema:name"><a href="https://www.idref.fr/137280815/id">Fabien Torre</a></span><meta property="schema:roleName" content="Directeur de recherche"> </span>, maître de conférence (Informatique).
 				</p>
 			</section>
-			
-			<!-- 3. Le texte -->
 			<section aria-labelledby="texte">
 				<h2 id="texte">Le texte édité</h2>
-				
 				<p>
 					Le <span xml:lang="la" lang="la">Liber de quibusdam ultramarinis partibus</span>
 					est un récit de voyage en latin décrivant les territoires d’Orient.
 				</p>
 			</section>
-			
-			<!-- 4. Sources -->
 			<section aria-labelledby="sources">
 				<h2 id="sources">Sources et témoins</h2>
-				
 				<ul>
 					<li>Manuscrit de Lille (Li)</li>
 					<li>Manuscrit d’Utrecht (U)</li>
@@ -117,30 +110,18 @@
 					<li>Édition de Christiane Deluz</li>
 				</ul>
 			</section>
-			
-			<!-- 5. Méthodologie -->
 			<section aria-labelledby="methode">
 				<h2 id="methode">Méthodologie</h2>
-				
 				<p>
 					L’édition est réalisée en XML-TEI et exploitée dans un environnement numérique
 					permettant l’exploration des variantes et des attestations.
 				</p>
 			</section>
-			
-			<!-- 6. Accès -->
 			<section aria-labelledby="acces">
 				<h2 id="acces">Accéder au projet</h2>
-				
-				<p>
-					<a href="edition.html">Consulter l’édition</a>
-				</p>
-				
-				<p>
-					<a href="glossaire.html">Consulter le glossaire</a>
-				</p>
+				<p><a href="edition.html">Consulter l’édition</a></p>
+				<p><a href="glossaire.html">Consulter le glossaire</a></p>
 			</section>
-			
 		</main>
 		<footer tabindex="-1" id="footer">
 		<nav aria-label="Liens de retour">
