@@ -1,0 +1,64 @@
+/***************************************
+  Positionnement des blocs via flex bloc
+***************************************/
+.flex-container {
+     display: -webkit-box;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     justify-content: space-around;
+     gap: 2px;
+     align-items: stretch;
+     align-content:stretch;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+     flex-direction: row;
+}
+
+.flex-wrapper {
+     flex-wrap: wrap; /* permet aux éléments de la ligne qui devraient sortir de l’écran d’aller naturellement à la ligne d’en dessous, évitant ainsi un scrolling horizontal. */
+ }
+
+/*********************************
+ Ordre des composants dans le body
+*********************************/
+header {
+    order: 0;
+}
+
+nav {
+    order: 1;
+}
+
+#main-content /* contient le corps de texte et les notes */{ 
+    order: 2;
+}
+
+footer {
+    order: 3;
+}
+
+/********************************************************
+ Taille des colonnes dans le contenu principal de la page
+********************************************************/
+main{
+     max-width: 90%;
+}
+
+aside {
+     width: 10%;
+}
+
+/*******************
+ Paramétrage du menu
+*******************/
+.menu {
+	justify-content: space-around;
+	gap: 10px;
+}
