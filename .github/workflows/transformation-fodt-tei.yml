@@ -37,7 +37,7 @@ jobs:
             run: |
               java -cp "saxon-he.jar:xmlresolver.jar" net.sf.saxon.Transform \
                 -s:work/transcription_boldensele.fodt \
-                -xsl:xslt/fodt_vers_tei.xsl \
+                -xsl:xslt/odt_vers_tei.xsl \
                 -o:tei/boldensele.xml
 
           - name: Vérifier la génération
