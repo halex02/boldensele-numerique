@@ -242,7 +242,7 @@
     </xsl:template>
 
     <!-- Notes et Apparat-->
-     <xsl:template match="note[@type = 'source']">
+    <xsl:template match="note[@type = 'source']">
         <xsl:variable name="numero">
             <xsl:number
                 level="any"
@@ -252,10 +252,27 @@
 
         <sup class="appel-source">
             <a href="#source-{$numero}"
-            id="appel-source-{$numero}">
-                <xsl:value-of select="string-join('src-',$numero)"/>
+                id="appel-source-{$numero}">
+                <xsl:value-of select="concat('src-', $numero)"/>
             </a>
         </sup>
+    </xsl:template>
+
+    <xsl:template match="note[@type = 'source']" mode="sources">
+        <xsl:variable name="numero">
+            <xsl:number
+                level="any"
+                count="note[@type = 'source']"
+                from="div"/>
+        </xsl:variable>
+
+        <li id="source-{$numero}">
+            <xsl:apply-templates/>
+            <xsl:text> </xsl:text>
+            <a href="#appel-source-{$numero}"
+                class="retour-source"
+                aria-label="Retour à l’appel de source {$numero}">↩</a>
+        </li>
     </xsl:template>
 
 </xsl:stylesheet>
