@@ -34,7 +34,7 @@ jobs:
       - name: Transformer la TEI en HTML
         run: |
           java -cp saxon-he.jar net.sf.saxon.Transform \
-            -s:boldensele.xml \
+            -s:tei/boldensele.xml \
             -xsl:xslt/tei_vers_html.xsl
 
       - name: Vérifier la génération

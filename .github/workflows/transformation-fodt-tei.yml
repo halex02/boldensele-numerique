@@ -7,17 +7,16 @@ on:
     paths:
       - "work/**"
       - "xslt/**"
-      - "tei/**"
   workflow_dispatch:
 
-  permissions:
+permissions:
     contents: write
 
-    jobs:
-      transform:
-        runs-on: ubuntu-latest
+jobs:
+    transform:
+      runs-on: ubuntu-latest
 
-        steps:
+      steps:
           - name: Récupérer le dépôt
             uses: actions/checkout@v5
 
@@ -36,7 +35,7 @@ on:
             run: |
               java -cp saxon-he.jar net.sf.saxon.Transform \
                 -s:work/boldensele.fodt \
-                -xsl:xslt/fodt_vers_tei.xsl
+                -xsl:xslt/fodt_vers_tei.xsl \
                 -o:tei/boldensele.xml
 
           - name: Vérifier la génération
@@ -57,8 +56,8 @@ on:
               fi
 
           - name: Notification Discord succès
-          if: success()
-          run: |
+            if: success()
+            run: |
               curl -H "Content-Type: application/json" \
               -d "{\"content\":\"✅ Transformation TEI → HTML réussie\n📦 Repo : ${{ github.repository }}\n🌿 Branche : ${{ github.ref_name }}\n🔁 Commit : ${{ github.sha }}\"}" \
               "${{ secrets.DISCORD_WEBHOOK_URL }}"
