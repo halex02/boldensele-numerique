@@ -1,0 +1,69 @@
+name: Transformation TEI vers HTML
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "boldensele.xml"
+      - "xslt/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  transform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v5
+
+      - name: Installer Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Télécharger Saxon-HE
+        run: |
+          wget -q https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.9/Saxon-HE-12.9.jar \
+            -O saxon-he.jar
+
+      - name: Transformer la TEI en HTML
+        run: |
+          java -cp saxon-he.jar net.sf.saxon.Transform \
+            -s:boldensele.xml \
+            -xsl:xslt/tei_vers_html.xsl
+
+      - name: Vérifier la génération
+        run: test -f docs/pages/prologue.html
+
+      - name: Commit des fichiers générés
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add docs/pages/
+
+          if git diff --cached --quiet; then
+            echo "Aucune modification à enregistrer."
+          else
+            git commit -m "Génération automatique des pages HTML"
+            git push
+          fi
+
+      - name: Notification Discord succès
+        if: success()
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d "{\"content\":\"✅ Transformation TEI → HTML réussie\n📦 Repo : ${{ github.repository }}\n🌿 Branche : ${{ github.ref_name }}\n🔁 Commit : ${{ github.sha }}\"}" \
+            "${{ secrets.DISCORD_WEBHOOK_URL }}"
+
+      - name: Notification Discord échec
+        if: failure()
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d "{\"content\":\"❌ Transformation TEI → HTML échouée\n📦 Repo : ${{ github.repository }}\n🌿 Branche : ${{ github.ref_name }}\n🔁 Commit : ${{ github.sha }}\n👉 Logs : ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+            "${{ secrets.DISCORD_WEBHOOK_URL }}"
