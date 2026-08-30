@@ -30,10 +30,12 @@ jobs:
         run: |
           wget -q https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.9/Saxon-HE-12.9.jar \
             -O saxon-he.jar
+          wget -q https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/6.0.17/xmlresolver-6.0.17.jar \
+          -O xmlresolver.jar
 
       - name: Transformer la TEI en HTML
         run: |
-          java -cp saxon-he.jar net.sf.saxon.Transform \
+          java -cp "saxon-he.jar:xmlresolver.jar" net.sf.saxon.Transform \
             -s:tei/boldensele.xml \
             -xsl:xslt/tei_vers_html.xsl
 
