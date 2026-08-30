@@ -1,0 +1,71 @@
+name: Transformation FODT vers TEI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "work/**"
+      - "xslt/**"
+      - "tei/**"
+  workflow_dispatch:
+
+  permissions:
+    contents: write
+
+    jobs:
+      transform:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Récupérer le dépôt
+            uses: actions/checkout@v5
+
+          - name: Installer Java
+            uses: actions/setup-java@v5
+            with:
+              distribution: temurin
+              java-version: "17"
+
+          - name: Télécharger Saxon-HE
+            run: |
+              wget -q https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.9/Saxon-HE-12.9.jar \
+                -O saxon-he.jar
+
+          - name: Transformer la FODT en TEI
+            run: |
+              java -cp saxon-he.jar net.sf.saxon.Transform \
+                -s:work/boldensele.fodt \
+                -xsl:xslt/fodt_vers_tei.xsl
+                -o:tei/boldensele.xml
+
+          - name: Vérifier la génération
+            run: test -f tei/boldensele.xml
+
+          - name: Commit des fichiers générés
+            run: |
+              git config user.name "github-actions[bot]"
+              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+              git add tei/
+
+              if git diff --cached --quiet; then
+                echo "Aucune modification à enregistrer."
+              else
+                git commit -m "Génération automatique du fichier TEI"
+                git push
+              fi
+
+          - name: Notification Discord succès
+          if: success()
+          run: |
+              curl -H "Content-Type: application/json" \
+              -d "{\"content\":\"✅ Transformation TEI → HTML réussie\n📦 Repo : ${{ github.repository }}\n🌿 Branche : ${{ github.ref_name }}\n🔁 Commit : ${{ github.sha }}\"}" \
+              "${{ secrets.DISCORD_WEBHOOK_URL }}"
+
+          - name: Notification Discord échec
+            if: failure()
+            run: |
+              curl -H "Content-Type: application/json" \
+              -d "{\"content\":\"❌ Transformation TEI → HTML échouée\n📦 Repo : ${{ github.repository }}\n🌿 Branche : ${{ github.ref_name }}\n🔁 Commit : ${{ github.sha }}\n👉 Logs : ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+              "${{ secrets.DISCORD_WEBHOOK_URL }}"

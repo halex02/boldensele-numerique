@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "boldensele.xml"
+      - "tei/boldensele.xml"
       - "xslt/**"
   workflow_dispatch:
 
