@@ -166,6 +166,16 @@
                                 <xsl:apply-templates/>
                             </div>
                         </article>
+                        <aside class="apparat" aria-labelledby="titre-apparat">
+                            <h2 id="titre-apparat">Apparat critique</h2>
+                            <ol class="apparat-critique">
+                                <xsl:apply-templates select=".//app" mode="apparat"/>
+                            </ol>
+                            <h2 id="titre-sources">Sources</h2>
+                            <ol class="liste-sources">
+                                <xsl:apply-templates select=".//note[@type='source']" mode="sources"/>
+                            </ol>
+                        </aside>
                     </main>
 
                     <!-- Pied de page -->
@@ -229,6 +239,23 @@
             <xsl:value-of select="@n"/>
             <xsl:text>]</xsl:text>
         </span>
+    </xsl:template>
+
+    <!-- Notes et Apparat-->
+     <xsl:template match="note[@type = 'source']">
+        <xsl:variable name="numero">
+            <xsl:number
+                level="any"
+                count="note[@type = 'source']"
+                from="div"/>
+        </xsl:variable>
+
+        <sup class="appel-source">
+            <a href="#source-{$numero}"
+            id="appel-source-{$numero}">
+                <xsl:value-of select="string-join('src-',$numero)"/>
+            </a>
+        </sup>
     </xsl:template>
 
 </xsl:stylesheet>
